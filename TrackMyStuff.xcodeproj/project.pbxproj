@@ -53,6 +53,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CA6C285D6505904EE11E361 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		8CA6C2CC30AACCAE51BDD217 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +83,7 @@
 				CCC738271EDDA7F000B9AD2C /* Usecases */,
 				CCC738291EDDA80900B9AD2C /* Resources */,
 				CCC738281EDDA7FC00B9AD2C /* Supporting Files */,
+				8CA6C285D6505904EE11E361 /* Models */,
 			);
 			path = TrackMyStuff;
 			sourceTree = "<group>";
