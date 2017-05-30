@@ -15,6 +15,10 @@
 		8CA6CBB04F62DEA461CEA649 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CA6C0330C5BE684590D9D8C /* Info.plist */; };
 		8CA6CF629528B45B4B8FE809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA6C214E0F7FBA5B662B468 /* LaunchScreen.storyboard */; };
 		CCC738701EDDC89900B9AD2C /* BTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC7386F1EDDC89900B9AD2C /* BTracker.framework */; };
+		CCC738751EDDD48300B9AD2C /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC738711EDDD48300B9AD2C /* RxCocoa.framework */; };
+		CCC738761EDDD48300B9AD2C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC738721EDDD48300B9AD2C /* RxSwift.framework */; };
+		CCC738771EDDD48300B9AD2C /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC738731EDDD48300B9AD2C /* Swinject.framework */; };
+		CCC738781EDDD48300B9AD2C /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC738741EDDD48300B9AD2C /* SwinjectStoryboard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		8CA6CE78F56C4361AB265CFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CA6CFC860397BD5F330F12F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCC7386F1EDDC89900B9AD2C /* BTracker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BTracker.framework; path = Carthage/Build/iOS/BTracker.framework; sourceTree = "<group>"; };
+		CCC738711EDDD48300B9AD2C /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		CCC738721EDDD48300B9AD2C /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		CCC738731EDDD48300B9AD2C /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		CCC738741EDDD48300B9AD2C /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCC738701EDDC89900B9AD2C /* BTracker.framework in Frameworks */,
+				CCC738751EDDD48300B9AD2C /* RxCocoa.framework in Frameworks */,
+				CCC738761EDDD48300B9AD2C /* RxSwift.framework in Frameworks */,
+				CCC738771EDDD48300B9AD2C /* Swinject.framework in Frameworks */,
+				CCC738781EDDD48300B9AD2C /* SwinjectStoryboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +111,10 @@
 		CCC7386E1EDDC88100B9AD2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CCC738711EDDD48300B9AD2C /* RxCocoa.framework */,
+				CCC738721EDDD48300B9AD2C /* RxSwift.framework */,
+				CCC738731EDDD48300B9AD2C /* Swinject.framework */,
+				CCC738741EDDD48300B9AD2C /* SwinjectStoryboard.framework */,
 				CCC7386F1EDDC89900B9AD2C /* BTracker.framework */,
 			);
 			name = Frameworks;
@@ -177,6 +193,10 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/BTracker.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwinjectStoryboard.framework",
 			);
 			name = "[Carthage] Strip Club";
 			outputPaths = (

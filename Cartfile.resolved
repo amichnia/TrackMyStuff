@@ -1,1 +1,4 @@
-github "GirAppe/BTracker" "4bc27277067fd0a3eff1e960a311011838c76523"
+github "GirAppe/BTracker" "0fc3d6e4645528044cc3c1426b6fc276c90265b8"
+github "ReactiveX/RxSwift" "3.4.1"
+github "Swinject/Swinject" "2.1.0"
+github "Swinject/SwinjectStoryboard" "1.1.1"
