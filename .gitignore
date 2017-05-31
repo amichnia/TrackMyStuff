@@ -9,6 +9,9 @@
 Carthage/Checkouts
 Carthage/Build
 
+# R.swift
+*.generated.swift
+
 ### CocoaPods ###
 ## CocoaPods GitIgnore Template
 
