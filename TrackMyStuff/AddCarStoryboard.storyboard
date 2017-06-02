@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bqu-wd-nZf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="Xa9-CD-Z53">
+            <objects>
+                <navigationController id="Bqu-wd-nZf" customClass="BaseNavigationController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UDU-tX-mOO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.52934861180000004" green="0.65943288799999999" blue="0.47089028360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2Cv-vw-pKn" kind="relationship" relationship="rootViewController" id="m41-MK-Prd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hwc-BN-IAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1990" y="-1158"/>
+        </scene>
+        <!--Add Car-->
+        <scene sceneID="OTa-pz-VvH">
+            <objects>
+                <viewController id="2Cv-vw-pKn" userLabel="Add Car" customClass="AddCarViewController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GVg-bB-wjr"/>
+                        <viewControllerLayoutGuide type="bottom" id="R05-ah-Ytc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JEc-0U-Uek">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nj6-Rs-p0x" customClass="PagedCollectionView" customModule="TrackMyStuff" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rlR-Hy-Kb0">
+                                    <size key="itemSize" width="127" height="141"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddCarCollectionViewCell" id="OcV-hW-Zib" customClass="AddCarCollectionViewCell" customModule="TrackMyStuff" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="127" height="141"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="127" height="141"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Car/car0" translatesAutoresizingMaskIntoConstraints="NO" id="xad-6h-0Ig">
+                                                    <rect key="frame" x="11.5" y="-9.5" width="104" height="104"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="104" id="QnI-sI-62N"/>
+                                                        <constraint firstAttribute="width" constant="104" id="hSm-H8-b2N"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="xad-6h-0Ig" firstAttribute="centerY" secondItem="OcV-hW-Zib" secondAttribute="bottom" multiplier="0.3" id="XID-DC-lfu"/>
+                                            <constraint firstItem="xad-6h-0Ig" firstAttribute="centerX" secondItem="OcV-hW-Zib" secondAttribute="centerX" id="jIf-nW-zUv"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="carIconImageView" destination="xad-6h-0Ig" id="Nju-ml-7NY"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="2Cv-vw-pKn" id="fOF-xJ-Zlf"/>
+                                </connections>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UqR-0F-sgJ" customClass="PassthroughView" customModule="TrackMyStuff" customModuleProvider="target">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <subviews>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBW-Jb-XeW">
+                                        <rect key="frame" x="111" y="121" width="120" height="120"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="B3k-6n-MUi"/>
+                                            <constraint firstAttribute="height" constant="120" id="D2B-TD-MYW"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="My Car" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cn2-x1-rzc">
+                                        <rect key="frame" x="16" y="487" width="311" height="42"/>
+                                        <color key="backgroundColor" red="0.93695610760000003" green="0.92509800200000003" blue="0.79311364890000002" alpha="0.083530327490774908" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="Com-EB-yq6"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZ2-91-0ay">
+                                        <rect key="frame" x="16" y="545" width="311" height="42"/>
+                                        <color key="backgroundColor" red="0.93695610760000003" green="0.92509800200000003" blue="0.79311364890000002" alpha="0.083530327490774908" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="L8c-H2-PFe"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Assign Beacon" image="Icon/beacon"/>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1et-Sy-4f8" customClass="KeyboardView" customModule="TrackMyStuff" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="603" width="343" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="750" id="lrR-pE-bQz"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Cn2-x1-rzc" secondAttribute="trailing" constant="16" id="1nb-lS-QPR"/>
+                                    <constraint firstAttribute="bottom" secondItem="iZ2-91-0ay" secondAttribute="bottom" priority="250" constant="16" id="A5z-hm-sqy"/>
+                                    <constraint firstItem="Cn2-x1-rzc" firstAttribute="centerX" secondItem="UqR-0F-sgJ" secondAttribute="centerX" id="CFi-UL-e7J"/>
+                                    <constraint firstAttribute="trailing" secondItem="iZ2-91-0ay" secondAttribute="trailing" constant="16" id="E4p-MF-Glo"/>
+                                    <constraint firstItem="1et-Sy-4f8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Cn2-x1-rzc" secondAttribute="bottom" constant="12" id="EMn-b3-IUm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cn2-x1-rzc" secondAttribute="trailing" constant="16" id="IMi-jb-aOu"/>
+                                    <constraint firstItem="Cn2-x1-rzc" firstAttribute="leading" secondItem="UqR-0F-sgJ" secondAttribute="leading" constant="16" id="Jkq-ah-kJh"/>
+                                    <constraint firstItem="Cn2-x1-rzc" firstAttribute="leading" secondItem="UqR-0F-sgJ" secondAttribute="leading" constant="16" id="WP1-E9-gcS"/>
+                                    <constraint firstItem="iZ2-91-0ay" firstAttribute="leading" secondItem="UqR-0F-sgJ" secondAttribute="leading" constant="16" id="hrL-8g-8ZW"/>
+                                    <constraint firstItem="1et-Sy-4f8" firstAttribute="leading" secondItem="UqR-0F-sgJ" secondAttribute="leading" id="miX-af-MTb"/>
+                                    <constraint firstItem="iZ2-91-0ay" firstAttribute="top" secondItem="Cn2-x1-rzc" secondAttribute="bottom" constant="16" id="n1s-y3-uB5"/>
+                                    <constraint firstItem="TBW-Jb-XeW" firstAttribute="centerX" secondItem="UqR-0F-sgJ" secondAttribute="centerX" id="ov7-pZ-T3L"/>
+                                    <constraint firstAttribute="bottom" secondItem="1et-Sy-4f8" secondAttribute="bottom" id="svJ-tB-HPi"/>
+                                    <constraint firstItem="TBW-Jb-XeW" firstAttribute="centerY" secondItem="UqR-0F-sgJ" secondAttribute="bottom" multiplier="0.3" id="tV3-7X-2xp"/>
+                                    <constraint firstAttribute="trailing" secondItem="1et-Sy-4f8" secondAttribute="trailing" id="vK6-6u-1yF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52934861180000004" green="0.65943288799999999" blue="0.47089028360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="UqR-0F-sgJ" firstAttribute="leading" secondItem="JEc-0U-Uek" secondAttribute="leadingMargin" id="5WU-tt-bIJ"/>
+                            <constraint firstItem="Nj6-Rs-p0x" firstAttribute="leading" secondItem="JEc-0U-Uek" secondAttribute="leading" id="8La-9W-8VQ"/>
+                            <constraint firstItem="R05-ah-Ytc" firstAttribute="top" secondItem="UqR-0F-sgJ" secondAttribute="bottom" id="Cdb-38-vk6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UqR-0F-sgJ" secondAttribute="trailing" id="D1I-6W-n2m"/>
+                            <constraint firstAttribute="trailing" secondItem="Nj6-Rs-p0x" secondAttribute="trailing" id="Mpt-nz-DTm"/>
+                            <constraint firstItem="R05-ah-Ytc" firstAttribute="top" secondItem="Nj6-Rs-p0x" secondAttribute="bottom" id="Rux-GB-vGQ"/>
+                            <constraint firstItem="UqR-0F-sgJ" firstAttribute="top" secondItem="GVg-bB-wjr" secondAttribute="bottom" id="Ude-Qp-DVl"/>
+                            <constraint firstItem="Nj6-Rs-p0x" firstAttribute="top" secondItem="JEc-0U-Uek" secondAttribute="top" id="y8n-dj-BFA"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="X6m-u1-fNd" appends="YES" id="tJ9-FX-qUO"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="TabBar/radar" id="KEY-cH-dqP"/>
+                    <navigationItem key="navigationItem" title="Add Car" id="Zcl-IL-Okg"/>
+                    <connections>
+                        <outlet property="assignButton" destination="iZ2-91-0ay" id="Yp8-dl-jRu"/>
+                        <outlet property="collectionView" destination="Nj6-Rs-p0x" id="MSV-4p-nLq"/>
+                        <outlet property="highlightView" destination="TBW-Jb-XeW" id="toZ-XN-5JZ"/>
+                        <outlet property="nameTextField" destination="Cn2-x1-rzc" id="bmS-Ts-Dqf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vG7-6z-vPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="X6m-u1-fNd">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="2Cv-vw-pKn" id="kJ9-jj-cWu"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2765.5999999999999" y="-1158.1709145427287"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Car/car0" width="104" height="104"/>
+        <image name="Icon/beacon" width="28" height="28"/>
+        <image name="TabBar/radar" width="21" height="21"/>
+    </resources>
+</document>

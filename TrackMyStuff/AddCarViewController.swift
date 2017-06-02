@@ -6,39 +6,65 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class AddCarViewController: UIViewController {
+class AddCarViewController: BaseViewController {
     @IBOutlet weak var collectionView: PagedCollectionView!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var assignButton: UIButton!
+    @IBOutlet weak var highlightView: UIView!
+    lazy var cancelButton: UIBarButtonItem! = { self.closeBarButtonItem() }()
 
-    // TODO: Setup DI
-    let bag = DisposeBag()
-    var icons: [ItemIcon] = Car.icons
+    var viewModel: AddCarViewModelType!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupBindings()
+        setupUI()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        collectionView.setupLayout()
     }
 
     private func setupBindings() {
-        collectionView.rx.pageProgress.subscribe(onNext: { page in
-            let colorA = self.icons[page.current].color
-            let colorB = self.icons[page.next].color
-            self.view.backgroundColor = UIColor.interpolate(colorA: colorA, colorB: colorB, factor: page.progress)
+        collectionView.rx.pageProgress --> viewModel.page >>> bag
+        viewModel.backgroundColor.asObservable().bind(to: view.rx.backgroundColor) >>> bag
+        if let bar = navigationController?.navigationBar {
+            viewModel.backgroundColor.asObservable().bind(to: bar.rx.barTintColor) >>> bag
+        }
+        viewModel.color.asObservable().bind(to: assignButton.rx.tintColor) >>> bag
+        viewModel.color.asObservable().bind(to: cancelButton.rx.tintColor) >>> bag
+        viewModel.color.asObservable().observeOnMain().subscribe(onNext: { color in
+            self.highlightView.layer.borderColor = color.cgColor
+            self.nameTextField.textColor = color
+            self.assignButton.setTitleColor(color, for: .normal)
+            self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: color]
         }) >>> bag
+        viewModel.iconsCount.asObservable().observeOnMain().asVoid().subscribe(onNext: { self.collectionView.reloadData() }) >>> bag
+        cancelButton.rx.tap.asObservable().observeOnMain().subscribe(onNext: { self.viewModel.cancel(addingFrom: self) }) >>> bag
+    }
+
+    private func setupUI() {
+        highlightView.layer.cornerRadius = highlightView.bounds.width / 2
+        highlightView.layer.borderWidth = 1
+        addLeftItem(item: cancelButton)
+    }
+
+    @IBAction func dismissKeyboard(_ sender: Any) {
+        nameTextField.resignFirstResponder()
     }
 }
 
 extension AddCarViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return icons.count
+        return viewModel.iconsCount.value
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.addCarCollectionViewCell, for: indexPath) else {
-            return UICollectionViewCell()
-        }
-
-        cell.image = icons[indexPath.row].image
+        let cell = collectionView.deque(R.reuseIdentifier.addCarCollectionViewCell, for: indexPath)
+        viewModel.setup(cell: cell, at: indexPath)
         return cell
     }
 }

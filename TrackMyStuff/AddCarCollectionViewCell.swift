@@ -4,7 +4,7 @@
 
 import UIKit
 
-protocol AddCarCollectionViewCellType {
+protocol AddCarCollectionViewCellType: class {
     var image: UIImage? { get set }
 }
 

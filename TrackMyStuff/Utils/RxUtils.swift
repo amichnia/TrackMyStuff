@@ -6,6 +6,18 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+extension Observable {
+    static func deferredJust(_ element: E) -> Observable<E> {
+        return Observable.deferred({ () -> Observable<E> in
+            return Observable<E>.just(element)
+        })
+    }
+
+    func asVoid() -> Observable<Void> {
+        return self.map { _ in }
+    }
+}
+
 extension ObservableType {
     public func observeOnMain() -> Observable<Self.E> {
         return observeOn(MainScheduler.instance)

@@ -67,7 +67,7 @@ extension UIColor {
 }
 
 extension UIColor {
-    static func interpolate(colorA: UIColor, colorB: UIColor, factor: Float) -> UIColor {
+    static func interpolate(colorA: UIColor, colorB: UIColor, factor: Double) -> UIColor {
         var color1 : (CGFloat,CGFloat,CGFloat,CGFloat) = (0,0,0,0)
         colorA.getRed(&color1.0, green: &color1.1, blue: &color1.2, alpha: &color1.3)
 
@@ -85,7 +85,7 @@ extension UIColor {
 }
 
 fileprivate extension CGFloat {
-    static func interpolate(first: CGFloat, second: CGFloat, factor: Float) -> CGFloat {
+    static func interpolate(first: CGFloat, second: CGFloat, factor: Double) -> CGFloat {
         return first + ((second - first) * CGFloat(factor))
     }
 }

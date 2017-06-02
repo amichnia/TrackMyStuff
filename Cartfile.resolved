@@ -1,5 +1,6 @@
 github "GirAppe/BTracker" "28277d46cce4afc7ca5d163eb3608ae9c241599b"
 github "ReactiveX/RxSwift" "3.5.0"
+github "SnapKit/SnapKit" "3.2.0"
 github "Swinject/Swinject" "2.1.0"
 github "Swinject/SwinjectStoryboard" "1.1.1"
-github "mac-cain13/R.swift.Library" "v3.0.2"
+github "mac-cain13/R.swift.Library" "v3.0.0.beta.1"
