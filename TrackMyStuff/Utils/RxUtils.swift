@@ -59,6 +59,22 @@ func --> <T>(variable1: Variable<T>, variable2: Variable<T>) -> Disposable {
     return variable1.asObservable().bind(to: variable2)
 }
 
+infix operator <->: AdditionPrecedence
+func <-> <T>(property: ControlProperty<T>, variable: Variable<T>) -> Disposable{
+    let bindToUIDisposable = variable.asObservable().debug("Variable values in bind")
+            .bind(to: property)
+
+    let bindToVariable = property
+    .debug("Property values in bind")
+    .subscribe(onNext: { n in
+        variable.value = n
+    }, onCompleted:  {
+        bindToUIDisposable.dispose()
+    })
+
+    return Disposables.create(bindToUIDisposable, bindToVariable)
+}
+
 public protocol Optionable {
     associatedtype WrappedType
     func unwrap() -> WrappedType

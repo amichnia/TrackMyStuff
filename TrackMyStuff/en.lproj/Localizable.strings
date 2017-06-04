@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  TrackMyStuff
+
+  Created by Andrzej Michnia on 04.06.2017.
+  Copyright © 2017 GirAppe Studio. All rights reserved.
+*/
+
+// Add car view
+"add.car.naviation.title" = "Add car";
+"add.car.add.label" = "Name:";
+"add.car.add.default" = "My Car";
+"add.car.add.placeholder" = "car name will allow to identify it";
+"add.car.beacon.label" = "Beacon:";
+
+// Assign beacon
+"assign.beacon.button.unassigned" = "Assign beacon";
+"assign.beacon.button.assigned(%@)" = "Assigned: %@";
+"assign.beacon.button.unassign" = "Unassign beacon";
+"assign.beacon.button.assign" = "Assign beacon";
+"assign.beacon.button.upadte" = "Update beacon";
+
+// Assign beacon view
+"assign.beacon.naviation.title" = "Assign beacon";
+"assign.beacon.uuid.proximity.label" = "Proximity UUID:";
+"assign.beacon.uuid.motion.label" = "Motion UUID:";
+"assign.beacon.minor.label" = "Minor:";
+"assign.beacon.major.label" = "Major:";
+"assign.beacon.uuid.proximity.placeholder" = "UUID";
+"assign.beacon.uuid.motion.placeholder" = "UUID (optional)";
+"assign.beacon.minor.placeholder" = "optional";
+"assign.beacon.major.placeholder" = "optional";

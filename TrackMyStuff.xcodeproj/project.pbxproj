@@ -7,37 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CA6C084EB81F2D3F858022B /* Icon+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CDF6397D751A7138DF3D /* Icon+UI.swift */; };
+		8CA6C0E2E14A3D56F2DE463C /* AssignBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C98A27219A3B91A8372C /* AssignBeaconViewController.swift */; };
 		8CA6C1241A8E5DACF37250C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA6CFA25D8AAE15FF01250A /* Main.storyboard */; };
 		8CA6C170AEDD05F457BFD105 /* CarMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C63BFF429C57BF7B7449 /* CarMotion.swift */; };
 		8CA6C216E290C59647C17480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CE78F56C4361AB265CFB /* AppDelegate.swift */; };
 		8CA6C3849B14E4723C30C8DA /* AddCarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C9B964BE0F4D8277B2BE /* AddCarCollectionViewCell.swift */; };
-		8CA6C3B3A3C511EBDB53109C /* ItemIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C813DA35DDEC184B371D /* ItemIcon.swift */; };
 		8CA6C3FC00BD186755BCBA6C /* PagedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C3A6A4423FAF908D18DE /* PagedCollectionView.swift */; };
 		8CA6C4842CE496D7D7387991 /* RUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C68615E456FC561F942A /* RUtils.swift */; };
+		8CA6C5268A49C6418448ADE4 /* BasicViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CED8244DB6E29FE567ED /* BasicViewTheme.swift */; };
 		8CA6C58400498DA3CEAEE037 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CFEA7E40D2AC0ECBA953 /* KeyboardView.swift */; };
 		8CA6C5856EF5843F1B568125 /* AddCarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C4B1646E5D54BAF3D494 /* AddCarViewModel.swift */; };
+		8CA6C5D92E435F880430E3A4 /* FontStyle+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CAF6A0DED408F63652C8 /* FontStyle+UI.swift */; };
+		8CA6C672BABB92A743CE4272 /* AssignBeaconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C72A6E062A0BA44E363D /* AssignBeaconViewModel.swift */; };
 		8CA6C6901A9C70A538B2BE75 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C47FE33D8489B5BF67FB /* BaseTabBarController.swift */; };
 		8CA6C6AF62DEE49752913776 /* AddCarWorkflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C2958EC57F483181FACE /* AddCarWorkflow.swift */; };
 		8CA6C7D58F86CDEAB0CE4F3A /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CD7754340517ED5D8EB1 /* UIColor+Palette.swift */; };
 		8CA6C7F033F90D9C8E24CB92 /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CC953DA2755AC0C75DAF /* Array+Safe.swift */; };
+		8CA6C8264057E6A506C41E41 /* BeaconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C7057E49819670C5B998 /* BeaconViewModel.swift */; };
+		8CA6C84E0367BD7900519508 /* ItemIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C02D2FBED7B2D8C95406 /* ItemIcon.swift */; };
+		8CA6C8A1F53D4F9907E31FA2 /* ButtonTheme+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C4E51F7D8E6C7E7A1F92 /* ButtonTheme+UI.swift */; };
 		8CA6C94A7A7AE572C8DA3A26 /* RxUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C8D39C4246F64ADE0D11 /* RxUtils.swift */; };
 		8CA6C99F7B64F81FAE63F8FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CA6CFC860397BD5F330F12F /* Assets.xcassets */; };
-		8CA6C9FC74B7C6F5BC127573 /* FontStyle+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CAB3CD310D6ED96ADC10 /* FontStyle+UI.swift */; };
 		8CA6CB11B1CE6050FBF41FC3 /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C2EC27F98E017C7701FD /* AddCarViewController.swift */; };
-		8CA6CBB04F62DEA461CEA649 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CA6C0330C5BE684590D9D8C /* Info.plist */; };
 		8CA6CC57F9BF61C975923187 /* AddCarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CBAA28B3C8DBA3486B51 /* AddCarAssembly.swift */; };
-		8CA6CD1D1A5D620F8FDCEB23 /* Icon+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C420ED93E6EF506FFCC7 /* Icon+UI.swift */; };
-		8CA6CEA35387CEA27EB60CCF /* UIView+RxBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C2CEB8814C052F70B09B /* UIView+RxBackgroundColor.swift */; };
+		8CA6CEA35387CEA27EB60CCF /* UI+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C2CEB8814C052F70B09B /* UI+Rx.swift */; };
 		8CA6CEA914B1868629C2B89C /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C96663BECD2EB51037A0 /* Car.swift */; };
 		8CA6CEF7FFE5120E184A2E1B /* PassthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CBC52670BE6923A2D089 /* PassthroughView.swift */; };
 		8CA6CF1CE77ABF3364D50947 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C378DCF7818AEDEC50BA /* ItemType.swift */; };
 		8CA6CF629528B45B4B8FE809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA6C214E0F7FBA5B662B468 /* LaunchScreen.storyboard */; };
+		8CA6CF6F9EA97C5B5B17EF2B /* Int+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C261E5107375C8135051 /* Int+Convenience.swift */; };
 		8CA6CFA1D2BE61527C460AEF /* Optional+ToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C9C964460684CA6AA37C /* Optional+ToArray.swift */; };
-		8CA6CFB74FCA60DCCA7CA720 /* ButtonTheme+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CE323D12597016C3634F /* ButtonTheme+UI.swift */; };
 		CC1133921EE16023007784F4 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1133911EE16023007784F4 /* MainAssembly.swift */; };
 		CC1133971EE16098007784F4 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1133941EE16098007784F4 /* BaseNavigationController.swift */; };
 		CC1133981EE16098007784F4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1133951EE16098007784F4 /* BaseViewController.swift */; };
 		CC11339B1EE18B55007784F4 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC11339A1EE18B55007784F4 /* SnapKit.framework */; };
+		CC1133A01EE43611007784F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1133A21EE43611007784F4 /* Localizable.strings */; };
 		CC9873421EE00D7600A8CC5D /* AddCarStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9873411EE00D7600A8CC5D /* AddCarStoryboard.storyboard */; };
 		CC9873461EE04B7300A8CC5D /* AnyWorkflowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9873431EE04B7300A8CC5D /* AnyWorkflowType.swift */; };
 		CC9873471EE04B7300A8CC5D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9873441EE04B7300A8CC5D /* Common.swift */; };
@@ -54,38 +59,44 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8CA6C02D2FBED7B2D8C95406 /* ItemIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemIcon.swift; sourceTree = "<group>"; };
 		8CA6C0330C5BE684590D9D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		8CA6C1048B997E411445E03E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8CA6C261E5107375C8135051 /* Int+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Convenience.swift"; sourceTree = "<group>"; };
 		8CA6C2958EC57F483181FACE /* AddCarWorkflow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarWorkflow.swift; sourceTree = "<group>"; };
-		8CA6C2CEB8814C052F70B09B /* UIView+RxBackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+RxBackgroundColor.swift"; path = "TrackMyStuff/UIView+RxBackgroundColor.swift"; sourceTree = SOURCE_ROOT; };
+		8CA6C2CEB8814C052F70B09B /* UI+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UI+Rx.swift"; path = "TrackMyStuff/UI+Rx.swift"; sourceTree = SOURCE_ROOT; };
 		8CA6C2EC27F98E017C7701FD /* AddCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
 		8CA6C378DCF7818AEDEC50BA /* ItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		8CA6C3A6A4423FAF908D18DE /* PagedCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagedCollectionView.swift; path = ../../PagedCollectionView.swift; sourceTree = "<group>"; };
 		8CA6C3BC0B83C670B9EC1D63 /* TrackMyStuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackMyStuff.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CA6C420ED93E6EF506FFCC7 /* Icon+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Icon+UI.swift"; sourceTree = "<group>"; };
 		8CA6C47FE33D8489B5BF67FB /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		8CA6C4B1646E5D54BAF3D494 /* AddCarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarViewModel.swift; sourceTree = "<group>"; };
+		8CA6C4E51F7D8E6C7E7A1F92 /* ButtonTheme+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonTheme+UI.swift"; sourceTree = "<group>"; };
 		8CA6C63BFF429C57BF7B7449 /* CarMotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarMotion.swift; sourceTree = "<group>"; };
 		8CA6C68615E456FC561F942A /* RUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RUtils.swift; sourceTree = "<group>"; };
 		8CA6C6B5BF2C6A3840B792C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8CA6C813DA35DDEC184B371D /* ItemIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemIcon.swift; sourceTree = "<group>"; };
+		8CA6C7057E49819670C5B998 /* BeaconViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconViewModel.swift; sourceTree = "<group>"; };
+		8CA6C72A6E062A0BA44E363D /* AssignBeaconViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignBeaconViewModel.swift; sourceTree = "<group>"; };
 		8CA6C8D39C4246F64ADE0D11 /* RxUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxUtils.swift; sourceTree = "<group>"; };
 		8CA6C96663BECD2EB51037A0 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		8CA6C98A27219A3B91A8372C /* AssignBeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignBeaconViewController.swift; sourceTree = "<group>"; };
 		8CA6C9B964BE0F4D8277B2BE /* AddCarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CA6C9C964460684CA6AA37C /* Optional+ToArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+ToArray.swift"; sourceTree = "<group>"; };
-		8CA6CAB3CD310D6ED96ADC10 /* FontStyle+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FontStyle+UI.swift"; sourceTree = "<group>"; };
+		8CA6CAF6A0DED408F63652C8 /* FontStyle+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FontStyle+UI.swift"; sourceTree = "<group>"; };
 		8CA6CBAA28B3C8DBA3486B51 /* AddCarAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarAssembly.swift; sourceTree = "<group>"; };
 		8CA6CBC52670BE6923A2D089 /* PassthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PassthroughView.swift; path = TrackMyStuff/PassthroughView.swift; sourceTree = SOURCE_ROOT; };
 		8CA6CC953DA2755AC0C75DAF /* Array+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
 		8CA6CD7754340517ED5D8EB1 /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
-		8CA6CE323D12597016C3634F /* ButtonTheme+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonTheme+UI.swift"; sourceTree = "<group>"; };
+		8CA6CDF6397D751A7138DF3D /* Icon+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Icon+UI.swift"; sourceTree = "<group>"; };
 		8CA6CE78F56C4361AB265CFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8CA6CED8244DB6E29FE567ED /* BasicViewTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicViewTheme.swift; sourceTree = "<group>"; };
 		8CA6CFC860397BD5F330F12F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CA6CFEA7E40D2AC0ECBA953 /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardView.swift; path = TrackMyStuff/KeyboardView.swift; sourceTree = SOURCE_ROOT; };
 		CC1133911EE16023007784F4 /* MainAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		CC1133941EE16098007784F4 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		CC1133951EE16098007784F4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CC11339A1EE18B55007784F4 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		CC1133A11EE43611007784F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CC9873411EE00D7600A8CC5D /* AddCarStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddCarStoryboard.storyboard; sourceTree = "<group>"; };
 		CC9873431EE04B7300A8CC5D /* AnyWorkflowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyWorkflowType.swift; sourceTree = "<group>"; };
 		CC9873441EE04B7300A8CC5D /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -125,7 +136,7 @@
 				8CA6C96663BECD2EB51037A0 /* Car.swift */,
 				8CA6C63BFF429C57BF7B7449 /* CarMotion.swift */,
 				8CA6C378DCF7818AEDEC50BA /* ItemType.swift */,
-				8CA6CD58751A4B998C64E37C /* Theme */,
+				8CA6C546C56072FDF1E42BBF /* Theme */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,6 +147,18 @@
 				8CA6C3BC0B83C670B9EC1D63 /* TrackMyStuff.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8CA6C546C56072FDF1E42BBF /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				8CA6CAF6A0DED408F63652C8 /* FontStyle+UI.swift */,
+				8CA6C02D2FBED7B2D8C95406 /* ItemIcon.swift */,
+				8CA6C4E51F7D8E6C7E7A1F92 /* ButtonTheme+UI.swift */,
+				8CA6CDF6397D751A7138DF3D /* Icon+UI.swift */,
+				8CA6CED8244DB6E29FE567ED /* BasicViewTheme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		8CA6C6A4B75B49B6DF0A4F6A = {
@@ -183,19 +206,11 @@
 				8CA6C9B964BE0F4D8277B2BE /* AddCarCollectionViewCell.swift */,
 				8CA6C2EC27F98E017C7701FD /* AddCarViewController.swift */,
 				8CA6C4B1646E5D54BAF3D494 /* AddCarViewModel.swift */,
+				8CA6C98A27219A3B91A8372C /* AssignBeaconViewController.swift */,
+				8CA6C72A6E062A0BA44E363D /* AssignBeaconViewModel.swift */,
+				8CA6C7057E49819670C5B998 /* BeaconViewModel.swift */,
 			);
 			name = AddingCar;
-			sourceTree = "<group>";
-		};
-		8CA6CD58751A4B998C64E37C /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				8CA6CAB3CD310D6ED96ADC10 /* FontStyle+UI.swift */,
-				8CA6C813DA35DDEC184B371D /* ItemIcon.swift */,
-				8CA6CE323D12597016C3634F /* ButtonTheme+UI.swift */,
-				8CA6C420ED93E6EF506FFCC7 /* Icon+UI.swift */,
-			);
-			path = Theme;
 			sourceTree = "<group>";
 		};
 		8CA6CD5EF6737021EE24ACBE /* UI */ = {
@@ -203,7 +218,7 @@
 			children = (
 				CC9873491EE04B8000A8CC5D /* UIWindow+ReplaceAnimated.swift */,
 				8CA6C3A6A4423FAF908D18DE /* PagedCollectionView.swift */,
-				8CA6C2CEB8814C052F70B09B /* UIView+RxBackgroundColor.swift */,
+				8CA6C2CEB8814C052F70B09B /* UI+Rx.swift */,
 				8CA6CFEA7E40D2AC0ECBA953 /* KeyboardView.swift */,
 				8CA6CBC52670BE6923A2D089 /* PassthroughView.swift */,
 			);
@@ -216,6 +231,7 @@
 				8CA6CD7754340517ED5D8EB1 /* UIColor+Palette.swift */,
 				8CA6C9C964460684CA6AA37C /* Optional+ToArray.swift */,
 				8CA6CC953DA2755AC0C75DAF /* Array+Safe.swift */,
+				8CA6C261E5107375C8135051 /* Int+Convenience.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -263,6 +279,7 @@
 			children = (
 				8CA6CE78F56C4361AB265CFB /* AppDelegate.swift */,
 				8CA6C0330C5BE684590D9D8C /* Info.plist */,
+				CC1133A21EE43611007784F4 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -318,6 +335,7 @@
 		8CA6CFE86C3920E0067FEA0B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "GirAppe Studio";
 				TargetAttributes = {
 					8CA6C70E5B546E2DE9525A73 = {
@@ -347,7 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CA6CBB04F62DEA461CEA649 /* Info.plist in Resources */,
+				CC1133A01EE43611007784F4 /* Localizable.strings in Resources */,
 				CC9873421EE00D7600A8CC5D /* AddCarStoryboard.storyboard in Resources */,
 				8CA6C99F7B64F81FAE63F8FB /* Assets.xcassets in Resources */,
 				8CA6CF629528B45B4B8FE809 /* LaunchScreen.storyboard in Resources */,
@@ -410,10 +428,6 @@
 				8CA6CFA1D2BE61527C460AEF /* Optional+ToArray.swift in Sources */,
 				8CA6C170AEDD05F457BFD105 /* CarMotion.swift in Sources */,
 				8CA6CF1CE77ABF3364D50947 /* ItemType.swift in Sources */,
-				8CA6C9FC74B7C6F5BC127573 /* FontStyle+UI.swift in Sources */,
-				8CA6C3B3A3C511EBDB53109C /* ItemIcon.swift in Sources */,
-				8CA6CFB74FCA60DCCA7CA720 /* ButtonTheme+UI.swift in Sources */,
-				8CA6CD1D1A5D620F8FDCEB23 /* Icon+UI.swift in Sources */,
 				8CA6C7D58F86CDEAB0CE4F3A /* UIColor+Palette.swift in Sources */,
 				8CA6C3FC00BD186755BCBA6C /* PagedCollectionView.swift in Sources */,
 				8CA6C94A7A7AE572C8DA3A26 /* RxUtils.swift in Sources */,
@@ -424,7 +438,7 @@
 				8CA6C7F033F90D9C8E24CB92 /* Array+Safe.swift in Sources */,
 				CC9873461EE04B7300A8CC5D /* AnyWorkflowType.swift in Sources */,
 				8CA6C4842CE496D7D7387991 /* RUtils.swift in Sources */,
-				8CA6CEA35387CEA27EB60CCF /* UIView+RxBackgroundColor.swift in Sources */,
+				8CA6CEA35387CEA27EB60CCF /* UI+Rx.swift in Sources */,
 				CC98734A1EE04B8000A8CC5D /* UIWindow+ReplaceAnimated.swift in Sources */,
 				CC1133981EE16098007784F4 /* BaseViewController.swift in Sources */,
 				8CA6CC57F9BF61C975923187 /* AddCarAssembly.swift in Sources */,
@@ -432,6 +446,15 @@
 				8CA6C6AF62DEE49752913776 /* AddCarWorkflow.swift in Sources */,
 				8CA6C58400498DA3CEAEE037 /* KeyboardView.swift in Sources */,
 				8CA6CEF7FFE5120E184A2E1B /* PassthroughView.swift in Sources */,
+				8CA6C0E2E14A3D56F2DE463C /* AssignBeaconViewController.swift in Sources */,
+				8CA6C672BABB92A743CE4272 /* AssignBeaconViewModel.swift in Sources */,
+				8CA6C8264057E6A506C41E41 /* BeaconViewModel.swift in Sources */,
+				8CA6C5D92E435F880430E3A4 /* FontStyle+UI.swift in Sources */,
+				8CA6C84E0367BD7900519508 /* ItemIcon.swift in Sources */,
+				8CA6C8A1F53D4F9907E31FA2 /* ButtonTheme+UI.swift in Sources */,
+				8CA6C084EB81F2D3F858022B /* Icon+UI.swift in Sources */,
+				8CA6C5268A49C6418448ADE4 /* BasicViewTheme.swift in Sources */,
+				8CA6CF6F9EA97C5B5B17EF2B /* Int+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +476,14 @@
 			);
 			name = Main.storyboard;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		CC1133A21EE43611007784F4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC1133A11EE43611007784F4 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -480,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -531,6 +563,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
