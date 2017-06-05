@@ -64,10 +64,10 @@
 		8CA6C1048B997E411445E03E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CA6C261E5107375C8135051 /* Int+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Convenience.swift"; sourceTree = "<group>"; };
 		8CA6C2958EC57F483181FACE /* AddCarWorkflow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarWorkflow.swift; sourceTree = "<group>"; };
-		8CA6C2CEB8814C052F70B09B /* UI+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UI+Rx.swift"; path = "TrackMyStuff/UI+Rx.swift"; sourceTree = SOURCE_ROOT; };
+		8CA6C2CEB8814C052F70B09B /* UI+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UI+Rx.swift"; path = "UI+Rx.swift"; sourceTree = "<group>"; };
 		8CA6C2EC27F98E017C7701FD /* AddCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
 		8CA6C378DCF7818AEDEC50BA /* ItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
-		8CA6C3A6A4423FAF908D18DE /* PagedCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagedCollectionView.swift; path = ../../PagedCollectionView.swift; sourceTree = "<group>"; };
+		8CA6C3A6A4423FAF908D18DE /* PagedCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagedCollectionView.swift; path = PagedCollectionView.swift; sourceTree = "<group>"; };
 		8CA6C3BC0B83C670B9EC1D63 /* TrackMyStuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackMyStuff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA6C47FE33D8489B5BF67FB /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		8CA6C4B1646E5D54BAF3D494 /* AddCarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarViewModel.swift; sourceTree = "<group>"; };
@@ -84,14 +84,14 @@
 		8CA6C9C964460684CA6AA37C /* Optional+ToArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+ToArray.swift"; sourceTree = "<group>"; };
 		8CA6CAF6A0DED408F63652C8 /* FontStyle+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FontStyle+UI.swift"; sourceTree = "<group>"; };
 		8CA6CBAA28B3C8DBA3486B51 /* AddCarAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarAssembly.swift; sourceTree = "<group>"; };
-		8CA6CBC52670BE6923A2D089 /* PassthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PassthroughView.swift; path = TrackMyStuff/PassthroughView.swift; sourceTree = SOURCE_ROOT; };
+		8CA6CBC52670BE6923A2D089 /* PassthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PassthroughView.swift; path = PassthroughView.swift; sourceTree = "<group>"; };
 		8CA6CC953DA2755AC0C75DAF /* Array+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
 		8CA6CD7754340517ED5D8EB1 /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
 		8CA6CDF6397D751A7138DF3D /* Icon+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Icon+UI.swift"; sourceTree = "<group>"; };
 		8CA6CE78F56C4361AB265CFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CA6CED8244DB6E29FE567ED /* BasicViewTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicViewTheme.swift; sourceTree = "<group>"; };
 		8CA6CFC860397BD5F330F12F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8CA6CFEA7E40D2AC0ECBA953 /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardView.swift; path = TrackMyStuff/KeyboardView.swift; sourceTree = SOURCE_ROOT; };
+		8CA6CFEA7E40D2AC0ECBA953 /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardView.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		CC1133911EE16023007784F4 /* MainAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		CC1133941EE16098007784F4 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		CC1133951EE16098007784F4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +211,7 @@
 				8CA6C7057E49819670C5B998 /* BeaconViewModel.swift */,
 			);
 			name = AddingCar;
+			path = AddingCar;
 			sourceTree = "<group>";
 		};
 		8CA6CD5EF6737021EE24ACBE /* UI */ = {
@@ -272,6 +273,7 @@
 				8CA6CB1D7AA0E009321592E9 /* AddingCar */,
 			);
 			name = Usecases;
+			path = Usecases;
 			sourceTree = "<group>";
 		};
 		CCC738281EDDA7FC00B9AD2C /* Supporting Files */ = {
@@ -282,6 +284,7 @@
 				CC1133A21EE43611007784F4 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		CCC738291EDDA80900B9AD2C /* Resources */ = {
@@ -291,6 +294,7 @@
 				8CA6C214E0F7FBA5B662B468 /* LaunchScreen.storyboard */,
 			);
 			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		CCC7386E1EDDC88100B9AD2C /* Frameworks */ = {
@@ -467,6 +471,7 @@
 				8CA6C1048B997E411445E03E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		8CA6CFA25D8AAE15FF01250A /* Main.storyboard */ = {
@@ -475,7 +480,7 @@
 				8CA6C6B5BF2C6A3840B792C4 /* Base */,
 			);
 			name = Main.storyboard;
-			path = ..;
+			path = .;
 			sourceTree = "<group>";
 		};
 		CC1133A21EE43611007784F4 /* Localizable.strings */ = {
@@ -484,6 +489,7 @@
 				CC1133A11EE43611007784F4 /* en */,
 			);
 			name = Localizable.strings;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -498,7 +504,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = TrackMyStuff/Info.plist;
+				INFOPLIST_FILE = "TrackMyStuff/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.girappe.TrackMyStuff;
@@ -613,7 +619,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = TrackMyStuff/Info.plist;
+				INFOPLIST_FILE = "TrackMyStuff/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.girappe.TrackMyStuff;
