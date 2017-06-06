@@ -8,7 +8,8 @@ import RxSwift
 
 protocol ItemsStorageType {
     var cars: [Car] { get }
-    var other: [ItemType] { get }
+    var bikes: [Bike] { get }
+    var other: [Item] { get }
 }
 
 class ItemsStorage: ItemsStorageType {
@@ -20,7 +21,12 @@ class ItemsStorage: ItemsStorageType {
         ItemsStorage.testCar.tracker = self.tracker
         return [ItemsStorage.testCar]
     }
-    var other: [ItemType] { return [] }
+    var bikes: [Bike] {
+        return []
+    }
+    var other: [Item] {
+        return []
+    }
 
     let tracker: TrackingManager
 

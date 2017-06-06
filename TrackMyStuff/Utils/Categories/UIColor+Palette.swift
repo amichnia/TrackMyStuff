@@ -16,6 +16,7 @@ extension UIColor {
     static let cambridgeBlue        = UIColor(netHex: 0x9FB7B9)
     static let shadowBlue           = UIColor(netHex: 0x7180AC)
     static let deepKoamaru          = UIColor(netHex: 0x2B4570)
+    static let silverBlue           = UIColor(netHex: 0xD7E6E6)
 
     struct text {
         static let veryLight        = UIColor(netHex: 0xFAFAFA)
@@ -25,19 +26,52 @@ extension UIColor {
         static let darkGray         = UIColor(netHex: 0x2C2E2A)
         static let dark             = UIColor(netHex: 0x151614)
     }
+
+    struct bike {
+        static let red1             = UIColor(netHex: 0xE24F61)
+        static let red2             = UIColor(netHex: 0xBF3421)
+        static let green            = UIColor(netHex: 0x45AB9A)
+    }
+
+    struct stuff {
+        static let keyBlue          = UIColor(netHex: 0x3E6181)
+        static let keyRed           = UIColor(netHex: 0xE04F60)
+        static let keyLime          = UIColor(netHex: 0x9AD752)
+        static let walletYellow     = UIColor(netHex: 0xFBD94E)
+        static let walletGreen      = UIColor(netHex: 0x46B39C)
+        static let purseOrange      = UIColor(netHex: 0xEF6F58)
+        static let backpackGreen    = UIColor(netHex: 0x46B39C)
+        static let briefcaseGray    = UIColor(netHex: 0x4E5C73)
+        static let unknownYellow    = UIColor(netHex: 0xE39E54)
+    }
 }
 
 extension UIColor {
     var counterHighlighted: UIColor {
         switch self {
+            // Cars
             case UIColor.hansaYellow: return UIColor.darkSkyBlue
             case UIColor.darkSkyBlue: return UIColor.hansaYellow
             case UIColor.pistachio: return UIColor.deepKoamaru
             case UIColor.deepKoamaru: return UIColor.pistachio
             case UIColor.englishVermillion: return UIColor.pistachio
-            case UIColor.indianYellow: return UIColor.englishVermillion
+            case UIColor.indianYellow: return UIColor.deepKoamaru
             case UIColor.aspargus: return UIColor.darkSkyBlue
-            default: return self
+            // Bikes
+            case UIColor.bike.green: return UIColor.silverBlue
+            case UIColor.bike.red1: return UIColor.darkSkyBlue
+            case UIColor.bike.red2: return UIColor.aspargus
+            // Stuff
+            case UIColor.stuff.keyBlue: return UIColor.stuff.keyLime
+            case UIColor.stuff.keyRed: return UIColor.silverBlue
+            case UIColor.stuff.walletYellow: return UIColor.stuff.walletGreen
+            case UIColor.stuff.walletGreen: return UIColor.silverBlue
+            case UIColor.stuff.purseOrange: return UIColor.darkSkyBlue
+            case UIColor.stuff.backpackGreen: return UIColor.darkSkyBlue
+            case UIColor.stuff.briefcaseGray: return UIColor.silverBlue
+            case UIColor.stuff.unknownYellow: return UIColor.blue
+            // Default
+            default: return UIColor.gray
         }
     }
 }

@@ -6,89 +6,34 @@ import UIKit
 import BTracker
 import RxSwift
 
-class Car: ItemType {
-    var identifier: Identifier
-    var beacon: Beacon?
+struct CarMotion: Trackable {
+    let identifier: Identifier
+    var trackedBy: TrackType { return .movement(type: .driving) }
+
+    init?(car: Car) {
+        guard !(car.beacon?.isMotion ?? false) else { return nil } // TODO: Verify if motion should be off
+        self.identifier = car.identifier
+    }
+
+    func matches(any identifier: Identifier) -> Bool {
+        return identifier == self.identifier
+    }
+
+    func deliver(event: TrackEvent) { }
+}
+
+class Car: BaseItem {
     var motion: CarMotion?
 
-    var icon: ItemIcon
-    var name: String { return identifier }
-    var plates: String?
+    override init(identifier: Identifier, icon: ItemIcon, beacon: Beacon? = nil) {
+        super.init(identifier: identifier, icon: icon, beacon: beacon)
 
-    var proximity = Variable<Proximity?>(nil)
-    var ranged = Variable<Bool>(false)
-    var inMotion = Variable<Bool>(false)
-    var isTracking = Variable<Bool>(false)
-    var trackDate = Variable<Date?>(nil)
-    var location = Variable<Location?>(nil)
-
-    let bag = DisposeBag()
-    weak var tracker: TrackingManager?
-
-    init(identifier: Identifier, icon: ItemIcon, beacon: Beacon? = nil) {
-        self.identifier = identifier
-        self.icon = icon
-        self.beacon = beacon
         self.motion = CarMotion(car: self)
-
         setupBindings()
     }
 
     private func setupBindings() {
-        ranged.asObservable().filter({ !$0 }).map({ Bool -> Proximity? in return nil }) --> proximity >>> bag
-        ranged.asObservable().subscribe(onNext: { ranged in
-            print("\(self.identifier) ranged \(ranged)")
-        }) >>> bag
-        proximity.asObservable().subscribe(onNext: { proximity in
-            print("\(self.identifier) proximity \(proximity ?? -1)")
-        }) >>> bag
-
-        isTracking.asObservable().subscribe(onNext: { tracking in
-            if tracking {
-                self.startTracking()
-            } else {
-                self.stopTracking()
-            }
-        }) >>> bag
-    }
-}
-
-extension Car {
-    func startTracking() {
-        guard let tracker = tracker else { return }
-        tracker.track(self)
-    }
-
-    func stopTracking() {
-        ranged.value = false
-        guard let tracker = tracker else { return }
-        tracker.stop(tracking: self)
-    }
-}
-
-extension Car: MultiTrackable {
-    var trackedBy: [Trackable] {
-        let beaconArray: [Trackable] = beacon.toArray
-        let motionArray: [Trackable] = motion.toArray
-        return beaconArray + motionArray
-    }
-
-    func delivered(event: TrackEvent, by trackable: Trackable) {
-        switch event {
-            case .regionDidEnter:
-                ranged.value = true
-            case .regionDidExit:
-                ranged.value = false
-            case .motionDidStart:
-                inMotion.value = true
-            case .motionDidEnd:
-                inMotion.value = false
-                location.value = Location(location: tracker?.currentLocation)
-            case let .proximityDidChange(value) where value ?? -1 >= 0:
-                proximity.value = value
-            default:
-                break
-        }
+        // TODO: Additional bindings for car motion?
     }
 }
 

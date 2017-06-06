@@ -208,7 +208,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2mS-Mh-pdg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="r7t-gK-LdP"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="r7t-gK-LdP">
+                            <connections>
+                                <action selector="addAction:" destination="n8N-md-LYw" id="0CD-ck-VjI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="xDK-rR-yiS" id="Iq6-7r-uFh"/>
@@ -609,7 +613,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.52934861180000004" green="0.65943288799999999" blue="0.47089028360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.88037014007568359" green="0.30930003523826599" blue="0.37452638149261475" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="HYZ-eU-Smk" firstAttribute="top" secondItem="UgJ-TM-1VS" secondAttribute="bottom" constant="16" id="24N-a7-kDn"/>

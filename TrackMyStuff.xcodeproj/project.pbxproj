@@ -10,7 +10,7 @@
 		8CA6C084EB81F2D3F858022B /* Icon+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CDF6397D751A7138DF3D /* Icon+UI.swift */; };
 		8CA6C0E2E14A3D56F2DE463C /* AssignBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C98A27219A3B91A8372C /* AssignBeaconViewController.swift */; };
 		8CA6C1241A8E5DACF37250C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA6CFA25D8AAE15FF01250A /* Main.storyboard */; };
-		8CA6C170AEDD05F457BFD105 /* CarMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C63BFF429C57BF7B7449 /* CarMotion.swift */; };
+		8CA6C170AEDD05F457BFD105 /* Bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C63BFF429C57BF7B7449 /* Bike.swift */; };
 		8CA6C216E290C59647C17480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CE78F56C4361AB265CFB /* AppDelegate.swift */; };
 		8CA6C3849B14E4723C30C8DA /* AddCarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C9B964BE0F4D8277B2BE /* AddCarCollectionViewCell.swift */; };
 		8CA6C3FC00BD186755BCBA6C /* PagedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C3A6A4423FAF908D18DE /* PagedCollectionView.swift */; };
@@ -21,7 +21,9 @@
 		8CA6C5268A49C6418448ADE4 /* BasicViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CED8244DB6E29FE567ED /* BasicViewTheme.swift */; };
 		8CA6C58400498DA3CEAEE037 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CFEA7E40D2AC0ECBA953 /* KeyboardView.swift */; };
 		8CA6C5856EF5843F1B568125 /* AddCarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C4B1646E5D54BAF3D494 /* AddCarViewModel.swift */; };
+		8CA6C5B5AA9F444CA021BFDA /* SectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CEA56C1AE0139F0A723A /* SectionViewModel.swift */; };
 		8CA6C5D92E435F880430E3A4 /* FontStyle+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CAF6A0DED408F63652C8 /* FontStyle+UI.swift */; };
+		8CA6C6303C2BB7E6CED38F90 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CD50EBCB4C6A8AD183C7 /* Item.swift */; };
 		8CA6C672BABB92A743CE4272 /* AssignBeaconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C72A6E062A0BA44E363D /* AssignBeaconViewModel.swift */; };
 		8CA6C6901A9C70A538B2BE75 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C47FE33D8489B5BF67FB /* BaseTabBarController.swift */; };
 		8CA6C6920972FD62A9AFECFC /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CC3D01F3070F02026E92 /* ItemCell.swift */; };
@@ -44,6 +46,7 @@
 		8CA6CF629528B45B4B8FE809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA6C214E0F7FBA5B662B468 /* LaunchScreen.storyboard */; };
 		8CA6CF6F9EA97C5B5B17EF2B /* Int+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C261E5107375C8135051 /* Int+Convenience.swift */; };
 		8CA6CFA1D2BE61527C460AEF /* Optional+ToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C9C964460684CA6AA37C /* Optional+ToArray.swift */; };
+		8CA6CFF8FCF3B20451DC816F /* BaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CE47717F9901BD388905 /* BaseItem.swift */; };
 		CC1133921EE16023007784F4 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1133911EE16023007784F4 /* MainAssembly.swift */; };
 		CC1133971EE16098007784F4 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1133941EE16098007784F4 /* BaseNavigationController.swift */; };
 		CC1133981EE16098007784F4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1133951EE16098007784F4 /* BaseViewController.swift */; };
@@ -87,7 +90,7 @@
 		8CA6C47FE33D8489B5BF67FB /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		8CA6C4B1646E5D54BAF3D494 /* AddCarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarViewModel.swift; sourceTree = "<group>"; };
 		8CA6C4E51F7D8E6C7E7A1F92 /* ButtonTheme+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonTheme+UI.swift"; sourceTree = "<group>"; };
-		8CA6C63BFF429C57BF7B7449 /* CarMotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarMotion.swift; sourceTree = "<group>"; };
+		8CA6C63BFF429C57BF7B7449 /* Bike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bike.swift; sourceTree = "<group>"; };
 		8CA6C68615E456FC561F942A /* RUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RUtils.swift; sourceTree = "<group>"; };
 		8CA6C6B5BF2C6A3840B792C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CA6C7057E49819670C5B998 /* BeaconViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconViewModel.swift; sourceTree = "<group>"; };
@@ -102,10 +105,13 @@
 		8CA6CBC52670BE6923A2D089 /* PassthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassthroughView.swift; sourceTree = "<group>"; };
 		8CA6CC3D01F3070F02026E92 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		8CA6CC953DA2755AC0C75DAF /* Array+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
+		8CA6CD50EBCB4C6A8AD183C7 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8CA6CD7754340517ED5D8EB1 /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
 		8CA6CDDD2FEE1B48AE086695 /* ItemsAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsAssembly.swift; sourceTree = "<group>"; };
 		8CA6CDF6397D751A7138DF3D /* Icon+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Icon+UI.swift"; sourceTree = "<group>"; };
+		8CA6CE47717F9901BD388905 /* BaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseItem.swift; sourceTree = "<group>"; };
 		8CA6CE78F56C4361AB265CFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8CA6CEA56C1AE0139F0A723A /* SectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionViewModel.swift; sourceTree = "<group>"; };
 		8CA6CED8244DB6E29FE567ED /* BasicViewTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicViewTheme.swift; sourceTree = "<group>"; };
 		8CA6CFC860397BD5F330F12F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CA6CFEA7E40D2AC0ECBA953 /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
@@ -179,6 +185,7 @@
 				8CA6CB1D7AA0E009321592E9 /* AddingCar */,
 				8CA6C0881C3190EB03B59E3F /* ItemsViewController.swift */,
 				8CA6C1B910D74A35787128D7 /* ItemsViewModel.swift */,
+				8CA6CEA56C1AE0139F0A723A /* SectionViewModel.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -186,8 +193,10 @@
 		8CA6C285D6505904EE11E361 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8CA6CE47717F9901BD388905 /* BaseItem.swift */,
+				8CA6CD50EBCB4C6A8AD183C7 /* Item.swift */,
+				8CA6C63BFF429C57BF7B7449 /* Bike.swift */,
 				8CA6C96663BECD2EB51037A0 /* Car.swift */,
-				8CA6C63BFF429C57BF7B7449 /* CarMotion.swift */,
 				8CA6C378DCF7818AEDEC50BA /* ItemType.swift */,
 				CCCBE02B1EE5D715005D3488 /* ItemsStorage.swift */,
 				8CA6C546C56072FDF1E42BBF /* Theme */,
@@ -498,7 +507,7 @@
 				CC9873481EE04B7300A8CC5D /* SourceViewType.swift in Sources */,
 				CC1133971EE16098007784F4 /* BaseNavigationController.swift in Sources */,
 				8CA6CFA1D2BE61527C460AEF /* Optional+ToArray.swift in Sources */,
-				8CA6C170AEDD05F457BFD105 /* CarMotion.swift in Sources */,
+				8CA6C170AEDD05F457BFD105 /* Bike.swift in Sources */,
 				8CA6CF1CE77ABF3364D50947 /* ItemType.swift in Sources */,
 				8CA6C7D58F86CDEAB0CE4F3A /* UIColor+Palette.swift in Sources */,
 				8CA6C3FC00BD186755BCBA6C /* PagedCollectionView.swift in Sources */,
@@ -536,6 +545,9 @@
 				8CA6C4CFC0987E36F60FC689 /* ItemsAssembly.swift in Sources */,
 				8CA6CD37DEECBF850B13A303 /* ItemsWorkflow.swift in Sources */,
 				8CA6CC8201AE8E8920184F6E /* TabBarViewModel.swift in Sources */,
+				8CA6CFF8FCF3B20451DC816F /* BaseItem.swift in Sources */,
+				8CA6C6303C2BB7E6CED38F90 /* Item.swift in Sources */,
+				8CA6C5B5AA9F444CA021BFDA /* SectionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

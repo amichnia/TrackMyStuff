@@ -34,9 +34,8 @@ class ItemsViewController: BaseViewController {
 
     }
 
-    @IBAction func addCar(_ sender: Any) {
-        print("Add car")
-        // TODO: add car flow
+    @IBAction func addAction(_ sender: Any) {
+        viewModel.addNewItem(from: self)
     }
 }
 
@@ -60,6 +59,4 @@ extension ItemsViewController: UITableViewDataSource {
     }
 }
 
-extension ItemsViewController: UITableViewDelegate {
-
-}
+extension ItemsViewController: UITableViewDelegate { }

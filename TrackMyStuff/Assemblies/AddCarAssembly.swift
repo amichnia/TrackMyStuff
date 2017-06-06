@@ -20,7 +20,8 @@ class AddCarAssembly: Assembly {
         container.register(AddCarViewModelType.self) { resolver in
             let main = resolver.resolve(MainWorkflowType.self)!
             let beaconViewModel = resolver.resolve(BeaconViewModelType.self)!
-            return AddCarViewModel(workflow: main, beacon: beaconViewModel)
+//            return AddCarViewModel(workflow: main, beacon: beaconViewModel)
+            return AddCarViewModel(workflow: main, beacon: beaconViewModel, icons: Car.icons + Bike.icons + Item.icons)
         }
 
         container.storyboardInitCompleted(AddCarViewController.self) { (resolver: Resolver, controller: AddCarViewController) in
