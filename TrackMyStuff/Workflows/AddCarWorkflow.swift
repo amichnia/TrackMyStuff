@@ -15,14 +15,14 @@ protocol AddCarWorkflowType: class, AnyWorkflowType {
 
 class AddCarWorkflow: AddCarWorkflowType {
     func start(from view: SourceViewType) {
-        guard let addCarNavigation = R.storyboard.addCarStoryboard.instantiateInitialViewController() else {
+        guard let addCarNavigation = R.storyboard.items.addCarNavigation() else {
             fatalError("cannot instantiate controller!")
         }
         view.present(addCarNavigation, animated: true)
     }
 
     func assignBeacon(with beacon: Beacon?, theme: BasicViewTheme, sender view: SourceViewType) -> Observable<Beacon?> {
-        guard let assignBeacon = R.storyboard.addCarStoryboard.assignBeaconViewController() else {
+        guard let assignBeacon = R.storyboard.items.assignBeaconViewController() else {
             fatalError("cannot instantiate controller!")
         }
 

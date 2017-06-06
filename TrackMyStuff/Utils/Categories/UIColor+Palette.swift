@@ -28,6 +28,21 @@ extension UIColor {
 }
 
 extension UIColor {
+    var counterHighlighted: UIColor {
+        switch self {
+            case UIColor.hansaYellow: return UIColor.darkSkyBlue
+            case UIColor.darkSkyBlue: return UIColor.hansaYellow
+            case UIColor.pistachio: return UIColor.deepKoamaru
+            case UIColor.deepKoamaru: return UIColor.pistachio
+            case UIColor.englishVermillion: return UIColor.pistachio
+            case UIColor.indianYellow: return UIColor.englishVermillion
+            case UIColor.aspargus: return UIColor.darkSkyBlue
+            default: return self
+        }
+    }
+}
+
+extension UIColor {
     convenience init(rgba: (CGFloat, CGFloat, CGFloat, CGFloat)) {
         self.init(red: rgba.0, green: rgba.1, blue: rgba.2, alpha: rgba.3)
     }
