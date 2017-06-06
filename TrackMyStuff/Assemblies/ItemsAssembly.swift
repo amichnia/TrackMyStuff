@@ -5,6 +5,7 @@
 import Foundation
 import Swinject
 import SwinjectStoryboard
+import BTracker
 
 class ItemsAssembly: Assembly {
     func assemble(container: Container) {
@@ -26,8 +27,9 @@ class ItemsAssembly: Assembly {
     }
 
     func assembleStorage(in container: Container) {
-        container.register(ItemsStorageType.self) { _ in
-            return ItemsStorage()
+        container.register(ItemsStorageType.self) { resolver in
+            let tracker = resolver.resolve(TrackingManager.self)!
+            return ItemsStorage(tracker: tracker)
         }.inObjectScope(.container)
     }
 }

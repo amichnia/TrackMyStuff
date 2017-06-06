@@ -67,6 +67,7 @@
 		CCCBE0281EE5C6E2005D3488 /* UIView+UINibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCBE0271EE5C6E2005D3488 /* UIView+UINibLoading.swift */; };
 		CCCBE02A1EE5CFF7005D3488 /* FloatingPoint+Formattable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCBE0291EE5CFF7005D3488 /* FloatingPoint+Formattable.swift */; };
 		CCCBE02C1EE5D715005D3488 /* ItemsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCBE02B1EE5D715005D3488 /* ItemsStorage.swift */; };
+		CCDA77C41EE6CDF60049179C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDA77C31EE6CDF60049179C /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +133,7 @@
 		CCCBE0271EE5C6E2005D3488 /* UIView+UINibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UINibLoading.swift"; sourceTree = "<group>"; };
 		CCCBE0291EE5CFF7005D3488 /* FloatingPoint+Formattable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Formattable.swift"; sourceTree = "<group>"; };
 		CCCBE02B1EE5D715005D3488 /* ItemsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsStorage.swift; sourceTree = "<group>"; };
+		CCDA77C31EE6CDF60049179C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDA77C41EE6CDF60049179C /* MapKit.framework in Frameworks */,
 				CCC738701EDDC89900B9AD2C /* BTracker.framework in Frameworks */,
 				CCAB3C441EDEEB6D00919497 /* Rswift.framework in Frameworks */,
 				CCC738751EDDD48300B9AD2C /* RxCocoa.framework in Frameworks */,
@@ -362,6 +365,7 @@
 		CCC7386E1EDDC88100B9AD2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CCDA77C31EE6CDF60049179C /* MapKit.framework */,
 				CC11339A1EE18B55007784F4 /* SnapKit.framework */,
 				CCAB3C431EDEEB6D00919497 /* Rswift.framework */,
 				CCC738711EDDD48300B9AD2C /* RxCocoa.framework */,
@@ -582,7 +586,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.girappe.TrackMyStuff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.1;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -697,7 +701,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.girappe.TrackMyStuff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.1;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

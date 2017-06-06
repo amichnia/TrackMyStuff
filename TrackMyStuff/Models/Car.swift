@@ -18,8 +18,12 @@ class Car: ItemType {
     var proximity = Variable<Proximity?>(nil)
     var ranged = Variable<Bool>(false)
     var inMotion = Variable<Bool>(false)
+    var isTracking = Variable<Bool>(false)
+    var trackDate = Variable<Date?>(nil)
+    var location = Variable<Location?>(nil)
 
     let bag = DisposeBag()
+    weak var tracker: TrackingManager?
 
     init(identifier: Identifier, icon: ItemIcon, beacon: Beacon? = nil) {
         self.identifier = identifier
@@ -38,6 +42,27 @@ class Car: ItemType {
         proximity.asObservable().subscribe(onNext: { proximity in
             print("\(self.identifier) proximity \(proximity ?? -1)")
         }) >>> bag
+
+        isTracking.asObservable().subscribe(onNext: { tracking in
+            if tracking {
+                self.startTracking()
+            } else {
+                self.stopTracking()
+            }
+        }) >>> bag
+    }
+}
+
+extension Car {
+    func startTracking() {
+        guard let tracker = tracker else { return }
+        tracker.track(self)
+    }
+
+    func stopTracking() {
+        ranged.value = false
+        guard let tracker = tracker else { return }
+        tracker.stop(tracking: self)
     }
 }
 
@@ -50,12 +75,19 @@ extension Car: MultiTrackable {
 
     func delivered(event: TrackEvent, by trackable: Trackable) {
         switch event {
-            case .regionDidEnter: ranged.value = true
-            case .regionDidExit: ranged.value = false
-            case .motionDidStart: inMotion.value = true
-            case .motionDidEnd: inMotion.value = false
-            case let .proximityDidChange(value) where value ?? -1 >= 0: proximity.value = value
-            default: break
+            case .regionDidEnter:
+                ranged.value = true
+            case .regionDidExit:
+                ranged.value = false
+            case .motionDidStart:
+                inMotion.value = true
+            case .motionDidEnd:
+                inMotion.value = false
+                location.value = Location(location: tracker?.currentLocation)
+            case let .proximityDidChange(value) where value ?? -1 >= 0:
+                proximity.value = value
+            default:
+                break
         }
     }
 }

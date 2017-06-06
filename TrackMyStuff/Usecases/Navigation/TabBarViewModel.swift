@@ -29,10 +29,6 @@ class TabBarViewModel: TabBarViewModelType {
         }
 
         tracker.start()
-
-        for car in storage.cars {
-            tracker.track(car)
-        }
     }
 
     func addNewCar(start view: SourceViewType) {

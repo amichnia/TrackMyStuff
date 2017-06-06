@@ -12,6 +12,11 @@ protocol ItemCellType: class {
 
     var bag: DisposeBag { get }
     var proximity: Variable<Double?> { get }
+    var isTracked: Variable<Bool> { get }
+    var isRanged: Variable<Bool> { get }
+    var isInMotion: Variable<Bool> { get }
+    var isLocationAvailable: Variable<Bool> { get }
+    var lastSpotDate: Variable<Date?> { get }
 }
 
 class ItemCell: UITableViewCell {
@@ -19,9 +24,19 @@ class ItemCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var proximityLabel: UILabel!
     @IBOutlet weak var proximityProgressView: UIProgressView!
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var trackingSwitch: UISwitch!
+    @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var radarButton: UIButton!
+    @IBOutlet weak var motionButton: UIButton!
 
     var bag: DisposeBag = DisposeBag()
     var proximity = Variable<Double?>(nil)
+    var isTracked = Variable<Bool>(false)
+    var isRanged = Variable<Bool>(false)
+    var isInMotion = Variable<Bool>(false)
+    var isLocationAvailable = Variable<Bool>(false)
+    var lastSpotDate = Variable<Date?>(nil)
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,11 +63,20 @@ class ItemCell: UITableViewCell {
 
         proximity.asObservable().map({ Float(Swift.max(0, 60 - ($0 ?? 1000)) / 60) }).bind(to: proximityProgressView.rx.progress) >>> bag
 
-        proximity.asObservable().subscribe(onNext: { proximity in
-            print("cell update proximity with \(proximity ?? -1)")
-        }, onDisposed: {
-            print("cell disposes proximity bindings")
-        }) >>> bag
+        trackingSwitch.rx.isOn <-> isTracked >>> bag
+
+        isRanged.asObservable().bind(to: radarButton.rx.isEnabled) >>> bag
+        isRanged.asObservable().bind(to: motionButton.rx.isEnabled) >>> bag
+        isLocationAvailable.asObservable().bind(to: locationButton.rx.isEnabled) >>> bag
+        isInMotion.asObservable().bind(to: motionButton.rx.isSelected) >>> bag
+
+        lastSpotDate.asObservable().map {
+            if let value = $0 {
+                return "Last spotted \(value)"
+            } else {
+                return "Never ranged"
+            }
+        }.bind(to: infoLabel.rx.text) >>> bag
     }
 }
 
@@ -66,10 +90,14 @@ extension ItemCell: ItemCellType {
         set {
             guard let newValue = newValue else { return }
             iconImageView.image = newValue.image
-            proximityProgressView.tintColor = newValue.font.color
+            proximityProgressView.tintColor = newValue.color.counterHighlighted
             nameLabel.textColor = newValue.font.color
             proximityLabel.textColor = newValue.font.color
             backgroundColor = newValue.color
+            trackingSwitch.onTintColor = newValue.color.counterHighlighted
+            locationButton.tintColor = newValue.color.counterHighlighted
+            radarButton.tintColor = newValue.color.counterHighlighted
+            motionButton.tintColor = newValue.color.counterHighlighted
         }
     }
 }

@@ -16,6 +16,15 @@ class ItemsStorage: ItemsStorageType {
     private static let testBeacon = Beacon(identifier: "car", proximityUUID: "B9407F30-F5F8-466E-AFF9-25556B57FE6A", major: 33, minor: 33, motionUUID: "39407F30-F5F8-466E-AFF9-25556B57FE6A")
     private static let testCar = Car(identifier: "My Car", icon: Car.icons[0], beacon: ItemsStorage.testBeacon)
 
-    var cars: [Car] { return [ItemsStorage.testCar] }
+    var cars: [Car] {
+        ItemsStorage.testCar.tracker = self.tracker
+        return [ItemsStorage.testCar]
+    }
     var other: [ItemType] { return [] }
+
+    let tracker: TrackingManager
+
+    init(tracker: TrackingManager) {
+        self.tracker = tracker
+    }
 }

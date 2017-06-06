@@ -75,5 +75,11 @@ class SectionViewModel: SectionViewModelType {
         cell.name = item.name
         cell.icon = item.icon
         item.proximity --> cell.proximity >>> cell.bag
+        item.ranged --> cell.isRanged >>> cell.bag
+        item.inMotion --> cell.isInMotion >>> cell.bag
+        item.location.asObservable().map({ $0 != nil }) --> cell.isLocationAvailable >>> cell.bag
+        cell.isTracked.value = item.isTracking.value
+        cell.isTracked.asObservable() --> item.isTracking >>> cell.bag
+        item.trackDate.asObservable() --> cell.lastSpotDate >>> cell.bag
     }
 }
