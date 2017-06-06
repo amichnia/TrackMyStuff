@@ -10,7 +10,7 @@ struct CarMotion: Trackable {
     var trackedBy: TrackType { return .movement(type: .driving) }
 
     init?(car: Car) {
-        guard !(car.beacon?.isMotion ?? false) else { return nil }
+        guard !(car.beacon?.isMotion ?? false) else { return nil } // TODO: Verify if motion should be off
         self.identifier = car.identifier
     }
 

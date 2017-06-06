@@ -5,12 +5,14 @@ import SwinjectStoryboard
 
 protocol MainWorkflowType: class, AnyWorkflowType {
     // TODO: Child workflows here
+    var itemsWorkflow: ItemsWorkflowType! { get set }
     var addCarWorkflow: AddCarWorkflowType! { get set }
 
     func start(window: UIWindow)
 }
 
 class MainWorkflow: MainWorkflowType {
+    var itemsWorkflow: ItemsWorkflowType!
     var addCarWorkflow: AddCarWorkflowType!
 
     func start(window: UIWindow) {

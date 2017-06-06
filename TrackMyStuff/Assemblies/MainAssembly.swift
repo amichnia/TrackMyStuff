@@ -5,6 +5,7 @@
 import Foundation
 import Swinject
 import SwinjectStoryboard
+import BTracker
 
 class MainAssembly: Assembly {
     func assemble(container: Container) {
@@ -15,18 +16,24 @@ class MainAssembly: Assembly {
     }
 
     func assembleMain(in container: Container) {
-         container.register(MainWorkflowType.self) { resolver in
+        container.register(MainWorkflowType.self) { resolver in
             let main = MainWorkflow()
+            main.itemsWorkflow = resolver.resolve(ItemsWorkflowType.self)
             main.addCarWorkflow = resolver.resolve(AddCarWorkflowType.self)
-
             return main
         }.inObjectScope(.container)
     }
 
     func assembleBaseNavigation(in container: Container) {
+        container.register(TrackingManager.self) { _ in
+            return TrackingManager()
+        }
+
         container.register(TabBarViewModelType.self) { resolver in
             let main = resolver.resolve(MainWorkflowType.self)!
-            return TabBarViewModel(workflow: main)
+            let storage = resolver.resolve(ItemsStorageType.self)!
+            let tracker = resolver.resolve(TrackingManager.self)!
+            return TabBarViewModel(workflow: main, storage: storage, tracker: tracker)
         }
 
         container.storyboardInitCompleted(BaseNavigationController.self) { (resolver: Resolver, controller: BaseNavigationController) in

@@ -30,3 +30,10 @@
 "assign.beacon.uuid.motion.placeholder" = "UUID (optional)";
 "assign.beacon.minor.placeholder" = "optional";
 "assign.beacon.major.placeholder" = "optional";
+
+// Items view
+"items.section.cars" = "Cars";
+
+// General
+"meter.short(%@)" = "%@m";
+"proximity.unknown" = "unknwown";
