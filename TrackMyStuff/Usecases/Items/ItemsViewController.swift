@@ -15,6 +15,7 @@ class ItemsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel.view = self
         setupUI()
         setupBindings()
         localize()
@@ -34,9 +35,8 @@ class ItemsViewController: BaseViewController {
 
     }
 
-    @IBAction func addCar(_ sender: Any) {
-        print("Add car")
-        // TODO: add car flow
+    @IBAction func addAction(_ sender: Any) {
+        viewModel.addNewItem(from: self)
     }
 }
 
@@ -45,8 +45,10 @@ extension ItemsViewController: UITableViewDataSource {
         return viewModel.numberOfSections.value
     }
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return viewModel.title(for: section)
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.itemHeaderCell.identifier) as! ItemHeaderCell
+        viewModel.setup(header, at: section)
+        return header
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,6 +62,4 @@ extension ItemsViewController: UITableViewDataSource {
     }
 }
 
-extension ItemsViewController: UITableViewDelegate {
-
-}
+extension ItemsViewController: UITableViewDelegate { }

@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Base Navigation Controller-->
+        <!--Add Car Navigation Controller-->
         <scene sceneID="Xa9-CD-Z53">
             <objects>
-                <navigationController storyboardIdentifier="AddCarNavigation" id="Bqu-wd-nZf" customClass="BaseNavigationController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AddCarNavigation" id="Bqu-wd-nZf" customClass="AddCarNavigationController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UDU-tX-mOO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="239" y="-305"/>
         </scene>
-        <!--Items View Controller-->
+        <!--Items-->
         <scene sceneID="hlg-is-7Vg">
             <objects>
                 <viewController id="n8N-md-LYw" customClass="ItemsViewController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,15 +56,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="138" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xDK-rR-yiS">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="140" sectionHeaderHeight="48" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xDK-rR-yiS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="138" id="0Dt-fF-i16" customClass="ItemCell" customModule="TrackMyStuff" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="138"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemHeaderCell" rowHeight="48" id="HvG-Lp-9nA" userLabel="Header Cell" customClass="ItemHeaderCell" customModule="TrackMyStuff" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="48" width="375" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HvG-Lp-9nA" id="Pgv-te-jL4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3C-oj-r8E">
+                                                    <rect key="frame" x="8" y="15" width="41.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" red="0.4008563161" green="0.41981995109999998" blue="0.39004191760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfJ-5g-nlf">
+                                                    <rect key="frame" x="327" y="2" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="4Um-Fc-qk0"/>
+                                                        <constraint firstAttribute="height" constant="44" id="hvi-kY-Ki4"/>
+                                                    </constraints>
+                                                    <state key="normal" image="Icon/add"/>
+                                                    <connections>
+                                                        <action selector="addAction:" destination="HvG-Lp-9nA" eventType="touchUpInside" id="oQ5-nU-tAY"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SfJ-5g-nlf" firstAttribute="centerY" secondItem="Pgv-te-jL4" secondAttribute="centerY" id="8iT-2K-6rp"/>
+                                                <constraint firstItem="O3C-oj-r8E" firstAttribute="centerY" secondItem="Pgv-te-jL4" secondAttribute="centerY" id="Ghn-2z-AC3"/>
+                                                <constraint firstAttribute="trailing" secondItem="SfJ-5g-nlf" secondAttribute="trailing" constant="4" id="H20-T2-Adg"/>
+                                                <constraint firstItem="O3C-oj-r8E" firstAttribute="leading" secondItem="Pgv-te-jL4" secondAttribute="leading" constant="8" id="U37-e7-bFj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="addButton" destination="SfJ-5g-nlf" id="33O-rO-Zac"/>
+                                            <outlet property="titleLabel" destination="O3C-oj-r8E" id="oxp-ty-IpQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" id="0Dt-fF-i16" customClass="ItemCell" customModule="TrackMyStuff" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="96" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Dt-fF-i16" id="cIp-Mg-mGF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="137"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XsN-Tg-eCz" userLabel="ItemContainer">
@@ -139,21 +177,21 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9j-vA-mdI">
-                                                    <rect key="frame" x="0.0" y="92.5" width="375" height="45"/>
+                                                    <rect key="frame" x="0.0" y="92.5" width="375" height="47"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rC3-vS-2wC">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmi-OO-TyP">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="45"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="47"/>
                                                                     <state key="normal" image="TabBar/map"/>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-od-shy">
-                                                                    <rect key="frame" x="125" y="0.0" width="125" height="45"/>
+                                                                    <rect key="frame" x="125" y="0.0" width="125" height="47"/>
                                                                     <state key="normal" image="TabBar/radar"/>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPl-Te-poW">
-                                                                    <rect key="frame" x="250" y="0.0" width="125" height="45"/>
+                                                                    <rect key="frame" x="250" y="0.0" width="125" height="47"/>
                                                                     <state key="normal" image="Icon/movement-none"/>
                                                                     <state key="selected" image="Icon/movement-motion"/>
                                                                     <state key="highlighted" image="Icon/movement-motion"/>
@@ -199,7 +237,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xDK-rR-yiS" firstAttribute="top" secondItem="yq2-AJ-CUK" secondAttribute="top" id="Waw-BL-gIF"/>
                             <constraint firstItem="6P2-K9-jrK" firstAttribute="top" secondItem="xDK-rR-yiS" secondAttribute="bottom" id="ZJ7-HS-VGx"/>
@@ -207,9 +245,7 @@
                             <constraint firstItem="xDK-rR-yiS" firstAttribute="leading" secondItem="yq2-AJ-CUK" secondAttribute="leading" id="bD6-Yz-17y"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2mS-Mh-pdg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="r7t-gK-LdP"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Items" id="2mS-Mh-pdg"/>
                     <connections>
                         <outlet property="tableView" destination="xDK-rR-yiS" id="Iq6-7r-uFh"/>
                         <segue destination="Bqu-wd-nZf" kind="presentation" identifier="ShowAddCarNavigation" id="Nbi-1L-Wfc"/>
@@ -222,7 +258,7 @@
         <!--Add Car-->
         <scene sceneID="OTa-pz-VvH">
             <objects>
-                <viewController id="2Cv-vw-pKn" userLabel="Add Car" customClass="AddCarViewController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Cv-vw-pKn" userLabel="Add Car" customClass="AddItemViewController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GVg-bB-wjr"/>
                         <viewControllerLayoutGuide type="bottom" id="R05-ah-Ytc"/>
@@ -241,7 +277,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddCarCollectionViewCell" id="OcV-hW-Zib" customClass="AddCarCollectionViewCell" customModule="TrackMyStuff" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddItemCollectionViewCell" id="OcV-hW-Zib" customClass="AddItemCollectionViewCell" customModule="TrackMyStuff" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="127" height="141"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -413,7 +449,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2837.5999999999999" y="-1158.1709145427287"/>
+            <point key="canvasLocation" x="4231" y="-1158"/>
         </scene>
         <!--Assign beacon-->
         <scene sceneID="a9d-Mx-g1D">
@@ -609,7 +645,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.52934861180000004" green="0.65943288799999999" blue="0.47089028360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.88037014007568359" green="0.30930003523826599" blue="0.37452638149261475" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="HYZ-eU-Smk" firstAttribute="top" secondItem="UgJ-TM-1VS" secondAttribute="bottom" constant="16" id="24N-a7-kDn"/>
@@ -653,15 +689,53 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3701.5999999999999" y="-1158.1709145427287"/>
+            <point key="canvasLocation" x="5044" y="-1158"/>
+        </scene>
+        <!--Add Bike Navigation Controller-->
+        <scene sceneID="Rev-Nb-0l9">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NBd-AP-7rU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="AddBikeNavigation" id="lX9-BE-wfa" customClass="AddBikeNavigationController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R1Q-bo-gj8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.52934861180000004" green="0.65943288799999999" blue="0.47089028360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2Cv-vw-pKn" kind="relationship" relationship="rootViewController" id="hqW-s6-Z5Y"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2673" y="-1158"/>
+        </scene>
+        <!--Add Item Navigation Controller-->
+        <scene sceneID="NSP-R9-tWk">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yhz-3y-L3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="AddItemNavigation" id="oyF-12-Nv4" customClass="AddItemNavigationController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zle-JP-Kdz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.52934861180000004" green="0.65943288799999999" blue="0.47089028360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2Cv-vw-pKn" kind="relationship" relationship="rootViewController" id="eMs-ZR-8Pl"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="3364" y="-1158"/>
         </scene>
     </scenes>
     <resources>
         <image name="Car/car0" width="104" height="104"/>
+        <image name="Icon/add" width="28" height="28"/>
         <image name="Icon/beacon" width="28" height="28"/>
         <image name="Icon/movement-motion" width="28" height="28"/>
         <image name="Icon/movement-none" width="28" height="28"/>
         <image name="TabBar/map" width="21" height="21"/>
         <image name="TabBar/radar" width="21" height="21"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="eMs-ZR-8Pl"/>
+    </inferredMetricsTieBreakers>
 </document>

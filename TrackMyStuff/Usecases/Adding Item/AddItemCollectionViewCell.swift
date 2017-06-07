@@ -4,15 +4,15 @@
 
 import UIKit
 
-protocol AddCarCollectionViewCellType: class {
+protocol AddItemCollectionViewCellType: class {
     var image: UIImage? { get set }
 }
 
-class AddCarCollectionViewCell: UICollectionViewCell {
+class AddItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var carIconImageView: UIImageView!
 }
 
-extension AddCarCollectionViewCell: AddCarCollectionViewCellType {
+extension AddItemCollectionViewCell: AddItemCollectionViewCellType {
     var image: UIImage? {
         get { return carIconImageView.image }
         set { carIconImageView.image = newValue }

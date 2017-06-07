@@ -12,9 +12,9 @@ class AppDelegate: UIResponder {
     var assembler: Assembler = {
         let assemblerInstance = Assembler()
         assemblerInstance.apply(assemblies: [
-            MainAssembly(),
-            ItemsAssembly(),
-            AddCarAssembly()
+                MainAssembly(),
+                ItemsAssembly(),
+                AddItemAssembly()
         ])
         return assemblerInstance
     }()
