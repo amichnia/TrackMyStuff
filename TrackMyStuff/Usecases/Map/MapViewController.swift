@@ -6,6 +6,24 @@ import UIKit
 import MapKit
 import RxSwift
 import RxCocoa
+import SnapKit
+
+class ItemAnnotationView: MKAnnotationView {
+    func setup(with image: UIImage?, color: UIColor?) {
+        backgroundColor = UIColor.white
+        bounds.size = CGSize(width: 58, height: 58)
+        layer.cornerRadius = 29
+        layer.masksToBounds = true
+
+        subviews.forEach { $0.removeFromSuperview() }
+        let imageView = UIImageView(image: image)
+        imageView.frame = bounds.insetBy(dx: 4, dy: 4)
+        addSubview(imageView)
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = 25
+        imageView.backgroundColor = color ?? UIColor.gray
+    }
+}
 
 class MapViewController: BaseViewController {
     @IBOutlet weak var mapView: MKMapView!
@@ -56,6 +74,11 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard !(annotation is MKUserLocation) else { return nil }
 
-        return nil
+        let view = mapView.dequeueReusableAnnotationView(withIdentifier: "selectedItem") ?? ItemAnnotationView(annotation: annotation, reuseIdentifier: "selectedItem")
+
+        view.annotation = annotation
+        (view as? ItemAnnotationView)?.setup(with: viewModel.annotation.value?.image, color: viewModel.annotation.value?.color)
+
+        return view
     }
 }

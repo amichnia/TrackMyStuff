@@ -13,12 +13,14 @@ protocol MapAnnotationViewModelType: class {
     var coordinate: Variable<CLLocationCoordinate2D?> { get }
     var title: String { get }
     var image: UIImage { get }
+    var color: UIColor { get }
 }
 
 class MapAnnotationViewModel: MapAnnotationViewModelType {
     var coordinate: Variable<CLLocationCoordinate2D?>
     var title: String
     var image: UIImage
+    var color: UIColor
 
     let bag = DisposeBag()
 
@@ -26,6 +28,7 @@ class MapAnnotationViewModel: MapAnnotationViewModelType {
         self.coordinate = Variable<CLLocationCoordinate2D?>(item.location.value?.coordinate)
         self.title = item.name
         self.image = item.icon.image
+        self.color = item.icon.color
 
         setupBindings(with: item)
     }
