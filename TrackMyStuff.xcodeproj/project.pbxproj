@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8CA6C084EB81F2D3F858022B /* Icon+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CDF6397D751A7138DF3D /* Icon+UI.swift */; };
+		8CA6C0C2CD24DF894451FD89 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C39F285608B822848420 /* MapViewModel.swift */; };
 		8CA6C0E2E14A3D56F2DE463C /* AssignBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C98A27219A3B91A8372C /* AssignBeaconViewController.swift */; };
 		8CA6C1241A8E5DACF37250C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA6CFA25D8AAE15FF01250A /* Main.storyboard */; };
 		8CA6C170AEDD05F457BFD105 /* Bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C63BFF429C57BF7B7449 /* Bike.swift */; };
+		8CA6C1AA4F5CAEF62B2D1F54 /* MapAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CABE564F0BEBFC728734 /* MapAssembly.swift */; };
 		8CA6C216E290C59647C17480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CE78F56C4361AB265CFB /* AppDelegate.swift */; };
 		8CA6C3849B14E4723C30C8DA /* AddItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C9B964BE0F4D8277B2BE /* AddItemCollectionViewCell.swift */; };
 		8CA6C3FC00BD186755BCBA6C /* PagedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C3A6A4423FAF908D18DE /* PagedCollectionView.swift */; };
@@ -25,6 +27,7 @@
 		8CA6C5D92E435F880430E3A4 /* FontStyle+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CAF6A0DED408F63652C8 /* FontStyle+UI.swift */; };
 		8CA6C6303C2BB7E6CED38F90 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CD50EBCB4C6A8AD183C7 /* Item.swift */; };
 		8CA6C672BABB92A743CE4272 /* AssignBeaconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C72A6E062A0BA44E363D /* AssignBeaconViewModel.swift */; };
+		8CA6C68F0592DB9C9E175116 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CF818A18FFE3201C97FC /* MapViewController.swift */; };
 		8CA6C6901A9C70A538B2BE75 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C47FE33D8489B5BF67FB /* BaseTabBarController.swift */; };
 		8CA6C6920972FD62A9AFECFC /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CC3D01F3070F02026E92 /* ItemCell.swift */; };
 		8CA6C6AF62DEE49752913776 /* AddItemWorkflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C2958EC57F483181FACE /* AddItemWorkflow.swift */; };
@@ -86,6 +89,7 @@
 		8CA6C2CEB8814C052F70B09B /* UI+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Rx.swift"; sourceTree = "<group>"; };
 		8CA6C2EC27F98E017C7701FD /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		8CA6C378DCF7818AEDEC50BA /* ItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
+		8CA6C39F285608B822848420 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		8CA6C3A6A4423FAF908D18DE /* PagedCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedCollectionView.swift; sourceTree = "<group>"; };
 		8CA6C3BC0B83C670B9EC1D63 /* TrackMyStuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackMyStuff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA6C47FE33D8489B5BF67FB /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 		8CA6C98A27219A3B91A8372C /* AssignBeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignBeaconViewController.swift; sourceTree = "<group>"; };
 		8CA6C9B964BE0F4D8277B2BE /* AddItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CA6C9C964460684CA6AA37C /* Optional+ToArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+ToArray.swift"; sourceTree = "<group>"; };
+		8CA6CABE564F0BEBFC728734 /* MapAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAssembly.swift; sourceTree = "<group>"; };
 		8CA6CAF6A0DED408F63652C8 /* FontStyle+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FontStyle+UI.swift"; sourceTree = "<group>"; };
 		8CA6CBAA28B3C8DBA3486B51 /* AddItemAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemAssembly.swift; sourceTree = "<group>"; };
 		8CA6CBC52670BE6923A2D089 /* PassthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassthroughView.swift; sourceTree = "<group>"; };
@@ -115,6 +120,7 @@
 		8CA6CE78F56C4361AB265CFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CA6CEA56C1AE0139F0A723A /* SectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionViewModel.swift; sourceTree = "<group>"; };
 		8CA6CED8244DB6E29FE567ED /* BasicViewTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicViewTheme.swift; sourceTree = "<group>"; };
+		8CA6CF818A18FFE3201C97FC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8CA6CFC860397BD5F330F12F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CA6CFEA7E40D2AC0ECBA953 /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		8CA6CFF2198C96C8587532F3 /* ItemsWorkflow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsWorkflow.swift; sourceTree = "<group>"; };
@@ -231,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				CCCBE0231EE590DD005D3488 /* Map.storyboard */,
+				8CA6CF818A18FFE3201C97FC /* MapViewController.swift */,
+				8CA6C39F285608B822848420 /* MapViewModel.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -318,6 +326,7 @@
 				CC1133911EE16023007784F4 /* MainAssembly.swift */,
 				8CA6CDDD2FEE1B48AE086695 /* ItemsAssembly.swift */,
 				8CA6CBAA28B3C8DBA3486B51 /* AddItemAssembly.swift */,
+				8CA6CABE564F0BEBFC728734 /* MapAssembly.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -552,6 +561,9 @@
 				8CA6C6303C2BB7E6CED38F90 /* Item.swift in Sources */,
 				8CA6C5B5AA9F444CA021BFDA /* SectionViewModel.swift in Sources */,
 				8CA6C785E2597FE17C941C32 /* ItemsHeaderCell.swift in Sources */,
+				8CA6C68F0592DB9C9E175116 /* MapViewController.swift in Sources */,
+				8CA6C0C2CD24DF894451FD89 /* MapViewModel.swift in Sources */,
+				8CA6C1AA4F5CAEF62B2D1F54 /* MapAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
