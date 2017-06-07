@@ -8,37 +8,43 @@ import RxCocoa
 import BTracker
 
 protocol ItemsViewModelType: class {
+    var view: SourceViewType! { get set }
+
     var numberOfSections: Variable<Int> { get }
 
     func numberOfRows(`in` section: Int) -> Int
-    func title(`for` section: Int) -> String
+    func setup(_ header: ItemHeaderCellType, at section: Int)
     func setup(_ cell: ItemCellType, at indexPath: IndexPath)
 
     func addNewItem(from sender: SourceViewType)
 }
 
 class ItemsViewModel {
-    var numberOfSections: Variable<Int>
-    var sections: Variable<[SectionViewModelType]>
-    var cars: Variable<[Car]>
+    weak var view: SourceViewType!
+    var numberOfSections = Variable<Int>(0)
+    var sections = Variable<[SectionViewModelType]>([])
 
     let bag = DisposeBag()
-    var workflow: MainWorkflowType!
+    let workflow: MainWorkflowType
+    let storage: ItemsStorageType
 
     init(workflow: MainWorkflowType, storage: ItemsStorageType) {
         self.workflow = workflow
-        self.cars = Variable<[Car]>(storage.cars)
-        let carsSection = SectionViewModel(title: R.string.localizable.itemsSectionCars(), items: storage.cars)
-        sections = Variable<[SectionViewModelType]>([carsSection])
-        numberOfSections = Variable<Int>(1)
+        self.storage = storage
 
         setupBindings()
     }
 
     private func setupBindings() {
-        let carsSection = cars.asObservable().map({ SectionViewModel(title: "Cars", items: $0) })
-        carsSection.map({ [$0] }).bind(to: sections) >>> bag
+        let carsSection = storage.cars.asObservable().map({ SectionViewModel(.car, title: "CARS", items: $0) })
+        let bikesSection = storage.bikes.asObservable().map({ SectionViewModel(.bike, title: "BIKES", items: $0) })
+        let otherSection = storage.other.asObservable().map({ SectionViewModel(.other, title: "OTHER", items: $0) })
 
+        let sectionsCombined = Observable.combineLatest(carsSection, bikesSection, otherSection) { (cars, bikes, other) in
+            return [cars, bikes, other] as [SectionViewModelType]
+        }
+
+        sectionsCombined.bind(to: sections) >>> bag
         sections.asObservable().map({ $0.count }).bind(to: numberOfSections) >>> bag
     }
 }
@@ -48,8 +54,12 @@ extension ItemsViewModel: ItemsViewModelType {
         return sections.value[safe: section]?.count ?? 0
     }
 
-    func title(`for` section: Int) -> String {
-        return sections.value[safe: section]?.title ?? ""
+    func setup(_ header: ItemHeaderCellType, at section: Int) {
+        guard let section = sections.value[safe: section] else { return }
+        header.title = section.title
+        header.addHandler = {
+            self.workflow.addItemWorkflow.start(from: self.view, with: section.itemsType)
+        }
     }
 
     func setup(_ cell: ItemCellType, at indexPath: IndexPath) {
@@ -57,6 +67,6 @@ extension ItemsViewModel: ItemsViewModelType {
     }
 
     func addNewItem(from sender: SourceViewType) {
-        workflow.addCarWorkflow.start(from: sender, with: .bike)
+        workflow.addItemWorkflow.start(from: sender, with: .bike)
     }
 }

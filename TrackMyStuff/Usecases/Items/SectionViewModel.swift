@@ -8,17 +8,20 @@ import RxCocoa
 import BTracker
 
 protocol SectionViewModelType: class {
+    var itemsType: TrackedItemType { get }
     var title: String { get }
     var count: Int { get }
     func setup(_ cell: ItemCellType, at indexPath: IndexPath)
 }
 
 class SectionViewModel: SectionViewModelType {
+    let itemsType: TrackedItemType
     let title: String
     let items: [ItemType]
     var count: Int { return items.count }
 
-    init(title: String, items: [ItemType]) {
+    init(_ itemsType: TrackedItemType, title: String, items: [ItemType]) {
+        self.itemsType = itemsType
         self.items = items
         self.title = title
     }

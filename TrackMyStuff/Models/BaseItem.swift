@@ -39,7 +39,7 @@ class BaseItem: ItemType {
     let bag = DisposeBag()
     weak var tracker: TrackingManager?
 
-    init(identifier: Identifier, icon: ItemIcon, beacon: Beacon? = nil) {
+    required init?(identifier: Identifier, icon: ItemIcon, beacon: Beacon? = nil) {
         self.identifier = identifier
         self.icon = icon
         self.beacon = beacon

@@ -25,7 +25,7 @@ struct BikeMotion: Trackable {
 class Bike: BaseItem {
     var motion: BikeMotion?
 
-    override init(identifier: Identifier, icon: ItemIcon, beacon: Beacon? = nil) {
+    required init?(identifier: Identifier, icon: ItemIcon, beacon: Beacon? = nil) {
         super.init(identifier: identifier, icon: icon, beacon: beacon)
 
         self.motion = BikeMotion(bike: self)

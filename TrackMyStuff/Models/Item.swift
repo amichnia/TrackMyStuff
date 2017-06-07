@@ -6,7 +6,13 @@ import UIKit
 import BTracker
 import RxSwift
 
-class Item: BaseItem { }
+class Item: BaseItem {
+    required init?(identifier: Identifier, icon: ItemIcon, beacon: Beacon? = nil) {
+        guard let beacon = beacon else { return nil }
+
+        super.init(identifier: identifier, icon: icon, beacon: beacon)
+    }
+}
 
 extension Item {
     static var icons: [ItemIcon] {

@@ -73,6 +73,7 @@ class AddItemViewController: BaseViewController {
         cancelButton.rx.tap.asObservable().observeOnMain().subscribe(onNext: { self.viewModel.cancel(sender: self) }) >>> bag
 
         viewModel.beaconViewModel.assignmentButtonText.asObservable().bind(to: assignButton.rx.title()) >>> bag
+        nameTextField.rx.text <-> viewModel.name >>> bag
     }
 
     private func setupUI() {

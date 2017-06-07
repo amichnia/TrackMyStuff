@@ -23,8 +23,8 @@ class TabBarViewModel: TabBarViewModelType {
     }
 
     func start(sender: SourceViewType) {
-        if storage.cars.isEmpty {
-            workflow.addCarWorkflow.start(from: sender, with: .car)
+        if storage.cars.value.isEmpty {
+            workflow.addItemWorkflow.start(from: sender, with: .car)
         }
 
         tracker.start()

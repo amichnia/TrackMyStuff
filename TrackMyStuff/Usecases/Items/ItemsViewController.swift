@@ -15,6 +15,7 @@ class ItemsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel.view = self
         setupUI()
         setupBindings()
         localize()
@@ -44,8 +45,10 @@ extension ItemsViewController: UITableViewDataSource {
         return viewModel.numberOfSections.value
     }
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return viewModel.title(for: section)
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.itemHeaderCell.identifier) as! ItemHeaderCell
+        viewModel.setup(header, at: section)
+        return header
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
