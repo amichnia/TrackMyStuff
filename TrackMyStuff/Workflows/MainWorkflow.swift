@@ -6,14 +6,14 @@ import SwinjectStoryboard
 protocol MainWorkflowType: class, AnyWorkflowType {
     // TODO: Child workflows here
     var itemsWorkflow: ItemsWorkflowType! { get set }
-    var addCarWorkflow: AddCarWorkflowType! { get set }
+    var addCarWorkflow: AddItemWorkflowType! { get set }
 
     func start(window: UIWindow)
 }
 
 class MainWorkflow: MainWorkflowType {
     var itemsWorkflow: ItemsWorkflowType!
-    var addCarWorkflow: AddCarWorkflowType!
+    var addCarWorkflow: AddItemWorkflowType!
 
     func start(window: UIWindow) {
         guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() else {

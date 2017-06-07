@@ -6,7 +6,11 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class AddCarViewController: BaseViewController {
+class AddItemNavigationController: BaseNavigationController {}
+class AddBikeNavigationController: BaseNavigationController {}
+class AddCarNavigationController: BaseNavigationController {}
+
+class AddItemViewController: BaseViewController {
     @IBOutlet weak var collectionView: PagedCollectionView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
@@ -18,7 +22,7 @@ class AddCarViewController: BaseViewController {
     @IBOutlet var lineViews: [UIView]!
     lazy var cancelButton: UIBarButtonItem! = { self.closeBarButtonItem() }()
 
-    var viewModel: AddCarViewModelType!
+    var viewModel: AddItemViewModelType!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,7 +90,7 @@ class AddCarViewController: BaseViewController {
     }
 
     @IBAction func add(_ sender: Any) {
-        viewModel.addCar(sender: self)
+        viewModel.save(sender: self)
     }
 
     @IBAction func assignBeacon(_ sender: Any) {
@@ -98,13 +102,13 @@ class AddCarViewController: BaseViewController {
     }
 }
 
-extension AddCarViewController: UICollectionViewDataSource {
+extension AddItemViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.iconsCount.value
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.deque(R.reuseIdentifier.addCarCollectionViewCell, for: indexPath)
+        let cell = collectionView.deque(R.reuseIdentifier.addItemCollectionViewCell, for: indexPath)
         viewModel.setup(cell: cell, at: indexPath)
         return cell
     }

@@ -7,7 +7,7 @@ import UIKit.UIColor
 import RxSwift
 import BTracker
 
-protocol AddCarViewModelType: class {
+protocol AddItemViewModelType: class {
     var canAdd: Variable<Bool> { get }
     var iconsCount: Variable<Int> { get }
     var name: Variable<String?> { get }
@@ -15,14 +15,14 @@ protocol AddCarViewModelType: class {
     var theme: Variable<BasicViewTheme> { get }
     var beaconViewModel: BeaconViewModelType { get }
 
-    func setup(cell: AddCarCollectionViewCellType, at indexPath: IndexPath)
+    func setup(cell: AddItemCollectionViewCellType, at indexPath: IndexPath)
 
-    func addCar(sender view: SourceViewType)
+    func save(sender view: SourceViewType)
     func assignBeacon(sender view: SourceViewType)
     func cancel(sender view: SourceViewType)
 }
 
-class AddCarViewModel: AddCarViewModelType {
+class AddItemViewModel<I: BaseItem>: AddItemViewModelType {
     var canAdd = Variable<Bool>(false)
     var iconsCount = Variable<Int>(0)
     var name = Variable<String?>(nil)
@@ -35,7 +35,7 @@ class AddCarViewModel: AddCarViewModelType {
     fileprivate var icons: Variable<[ItemIcon]>
     fileprivate var workflow: MainWorkflowType
 
-    init(workflow: MainWorkflowType, beacon: BeaconViewModelType, icons: [ItemIcon] = Car.icons) {
+    init(workflow: MainWorkflowType, beacon: BeaconViewModelType, icons: [ItemIcon], storage: ItemsStorageType) {
         self.icons = Variable<[ItemIcon]>(icons)
         self.workflow = workflow
         self.beaconViewModel = beacon
@@ -53,7 +53,7 @@ class AddCarViewModel: AddCarViewModelType {
         icons.asObservable().map({ $0.count }) --> iconsCount >>> bag
     }
 
-    func setup(cell: AddCarCollectionViewCellType, at indexPath: IndexPath) {
+    func setup(cell: AddItemCollectionViewCellType, at indexPath: IndexPath) {
         guard let icon = icons.value[safe: indexPath.row] else { return }
 
         cell.image = icon.image
@@ -71,7 +71,7 @@ class AddCarViewModel: AddCarViewModelType {
         return UIColor.interpolate(colorA: colorA, colorB: colorB, factor: page.progress)
     }
 
-    func addCar(sender view: SourceViewType) {
+    func save(sender view: SourceViewType) {
         // TODO: Save car
         workflow.addCarWorkflow.dismiss(view: view)
     }

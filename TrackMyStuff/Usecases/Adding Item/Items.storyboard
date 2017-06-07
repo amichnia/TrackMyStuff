@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Base Navigation Controller-->
+        <!--Add Car Navigation Controller-->
         <scene sceneID="Xa9-CD-Z53">
             <objects>
-                <navigationController storyboardIdentifier="AddCarNavigation" id="Bqu-wd-nZf" customClass="BaseNavigationController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AddCarNavigation" id="Bqu-wd-nZf" customClass="AddCarNavigationController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UDU-tX-mOO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -226,7 +226,7 @@
         <!--Add Car-->
         <scene sceneID="OTa-pz-VvH">
             <objects>
-                <viewController id="2Cv-vw-pKn" userLabel="Add Car" customClass="AddCarViewController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Cv-vw-pKn" userLabel="Add Car" customClass="AddItemViewController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GVg-bB-wjr"/>
                         <viewControllerLayoutGuide type="bottom" id="R05-ah-Ytc"/>
@@ -245,7 +245,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddCarCollectionViewCell" id="OcV-hW-Zib" customClass="AddCarCollectionViewCell" customModule="TrackMyStuff" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddItemCollectionViewCell" id="OcV-hW-Zib" customClass="AddItemCollectionViewCell" customModule="TrackMyStuff" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="127" height="141"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -417,7 +417,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2837.5999999999999" y="-1158.1709145427287"/>
+            <point key="canvasLocation" x="4231" y="-1158"/>
         </scene>
         <!--Assign beacon-->
         <scene sceneID="a9d-Mx-g1D">
@@ -657,7 +657,41 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3701.5999999999999" y="-1158.1709145427287"/>
+            <point key="canvasLocation" x="5044" y="-1158"/>
+        </scene>
+        <!--Add Bike Navigation Controller-->
+        <scene sceneID="Rev-Nb-0l9">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NBd-AP-7rU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="AddBikeNavigation" id="lX9-BE-wfa" customClass="AddBikeNavigationController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R1Q-bo-gj8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.52934861180000004" green="0.65943288799999999" blue="0.47089028360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2Cv-vw-pKn" kind="relationship" relationship="rootViewController" id="hqW-s6-Z5Y"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2673" y="-1158"/>
+        </scene>
+        <!--Add Item Navigation Controller-->
+        <scene sceneID="NSP-R9-tWk">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yhz-3y-L3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="AddItemNavigation" id="oyF-12-Nv4" customClass="AddItemNavigationController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zle-JP-Kdz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.52934861180000004" green="0.65943288799999999" blue="0.47089028360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2Cv-vw-pKn" kind="relationship" relationship="rootViewController" id="eMs-ZR-8Pl"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="3364" y="-1158"/>
         </scene>
     </scenes>
     <resources>
@@ -668,4 +702,7 @@
         <image name="TabBar/map" width="21" height="21"/>
         <image name="TabBar/radar" width="21" height="21"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="eMs-ZR-8Pl"/>
+    </inferredMetricsTieBreakers>
 </document>

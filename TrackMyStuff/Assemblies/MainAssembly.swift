@@ -19,7 +19,7 @@ class MainAssembly: Assembly {
         container.register(MainWorkflowType.self) { resolver in
             let main = MainWorkflow()
             main.itemsWorkflow = resolver.resolve(ItemsWorkflowType.self)
-            main.addCarWorkflow = resolver.resolve(AddCarWorkflowType.self)
+            main.addCarWorkflow = resolver.resolve(AddItemWorkflowType.self)
             return main
         }.inObjectScope(.container)
     }

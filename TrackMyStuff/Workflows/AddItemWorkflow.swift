@@ -8,17 +8,18 @@ import Swinject
 import SwinjectStoryboard
 import BTracker
 
-protocol AddCarWorkflowType: class, AnyWorkflowType {
-    func start(from view: SourceViewType)
+protocol AddItemWorkflowType: class, AnyWorkflowType {
+    func start(from view: SourceViewType, with type: TrackedItemType)
     func assignBeacon(with beacon: Beacon?, theme: BasicViewTheme, sender view: SourceViewType) -> Observable<Beacon?>
 }
 
-class AddCarWorkflow: AddCarWorkflowType {
-    func start(from view: SourceViewType) {
-        guard let addCarNavigation = R.storyboard.items.addCarNavigation() else {
-            fatalError("cannot instantiate controller!")
+class AddItemWorkflow: AddItemWorkflowType {
+    func start(from view: SourceViewType, with type: TrackedItemType) {
+        switch type {
+            case .other: view.present(R.storyboard.items.addItemNavigation()!, animated: true)
+            case .bike: view.present(R.storyboard.items.addBikeNavigation()!, animated: true)
+            case .car: view.present(R.storyboard.items.addCarNavigation()!, animated: true)
         }
-        view.present(addCarNavigation, animated: true)
     }
 
     func assignBeacon(with beacon: Beacon?, theme: BasicViewTheme, sender view: SourceViewType) -> Observable<Beacon?> {

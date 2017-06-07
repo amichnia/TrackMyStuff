@@ -6,7 +6,7 @@ import UIKit
 import BTracker
 import RxSwift
 
-enum TrackedItemType {
+enum TrackedItemType: String {
     case other
     case bike
     case car

@@ -57,6 +57,6 @@ extension ItemsViewModel: ItemsViewModelType {
     }
 
     func addNewItem(from sender: SourceViewType) {
-        workflow.addCarWorkflow.start(from: sender)
+        workflow.addCarWorkflow.start(from: sender, with: .bike)
     }
 }

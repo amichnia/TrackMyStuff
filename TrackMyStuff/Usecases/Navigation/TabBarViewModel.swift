@@ -8,7 +8,6 @@ import BTracker
 
 protocol TabBarViewModelType {
     func start(sender: SourceViewType)
-    func addNewCar(start view: SourceViewType)
 }
 
 class TabBarViewModel: TabBarViewModelType {
@@ -25,13 +24,9 @@ class TabBarViewModel: TabBarViewModelType {
 
     func start(sender: SourceViewType) {
         if storage.cars.isEmpty {
-            workflow.addCarWorkflow.start(from: sender)
+            workflow.addCarWorkflow.start(from: sender, with: .car)
         }
 
         tracker.start()
-    }
-
-    func addNewCar(start view: SourceViewType) {
-        workflow.addCarWorkflow.start(from: view)
     }
 }
