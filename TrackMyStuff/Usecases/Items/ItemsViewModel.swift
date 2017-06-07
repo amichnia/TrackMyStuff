@@ -63,7 +63,13 @@ extension ItemsViewModel: ItemsViewModelType {
     }
 
     func setup(_ cell: ItemCellType, at indexPath: IndexPath) {
-        sections.value[safe: indexPath.section]?.setup(cell, at: indexPath)
+        guard let section = sections.value[safe: indexPath.section] else { return }
+        section.setup(cell, at: indexPath)
+
+        guard let item = section.items[safe: indexPath.row] else { return }
+        cell.locationHandler = {
+            self.workflow.showLocation(for: item)
+        }
     }
 
     func addNewItem(from sender: SourceViewType) {

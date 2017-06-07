@@ -10,6 +10,7 @@ import BTracker
 protocol SectionViewModelType: class {
     var itemsType: TrackedItemType { get }
     var title: String { get }
+    var items: [ItemType] { get }
     var count: Int { get }
     func setup(_ cell: ItemCellType, at indexPath: IndexPath)
 }

@@ -6,20 +6,31 @@ import Foundation
 import RxSwift
 import BTracker
 
-protocol TabBarViewModelType {
+enum Tab: Int {
+    case items = 0
+    case map
+    case radar
+}
+
+protocol TabBarViewModelType: class {
+    var currentTab: Variable<Tab> { get }
+
     func start(sender: SourceViewType)
+    func set(tab: Tab)
 }
 
 class TabBarViewModel: TabBarViewModelType {
-    fileprivate var workflow: MainWorkflowType
+    var currentTab = Variable<Tab>(.items)
 
-    var tracker: TrackingManager
-    var storage: ItemsStorageType
+    let tracker: TrackingManager
+    let storage: ItemsStorageType
+    let workflow: MainWorkflowType
 
     init(workflow: MainWorkflowType, storage: ItemsStorageType, tracker: TrackingManager) {
         self.workflow = workflow
         self.tracker = tracker
         self.storage = storage
+        workflow.tabBarViewModel = self
     }
 
     func start(sender: SourceViewType) {
@@ -28,5 +39,9 @@ class TabBarViewModel: TabBarViewModelType {
         }
 
         tracker.start()
+    }
+
+    func set(tab: Tab) {
+        currentTab.value = tab
     }
 }

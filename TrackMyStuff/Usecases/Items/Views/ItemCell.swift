@@ -9,6 +9,8 @@ import RxCocoa
 protocol ItemCellType: class {
     var name: String? { get set }
     var icon: ItemIcon? { get set }
+    var locationHandler: VoidCompletionBlock? { get set }
+    var radarhandler: VoidCompletionBlock? { get set }
 
     var bag: DisposeBag { get }
     var proximity: Variable<Double?> { get }
@@ -38,6 +40,9 @@ class ItemCell: UITableViewCell {
     var isLocationAvailable = Variable<Bool>(false)
     var lastSpotDate = Variable<Date?>(nil)
 
+    var locationHandler: VoidCompletionBlock?
+    var radarhandler: VoidCompletionBlock?
+
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -47,6 +52,8 @@ class ItemCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
 
+        locationHandler = nil
+        radarhandler = nil
         setupBindings()
     }
 
@@ -77,6 +84,14 @@ class ItemCell: UITableViewCell {
                 return "Never ranged"
             }
         }.bind(to: infoLabel.rx.text) >>> bag
+    }
+
+    @IBAction func map(_ sender: Any) {
+        locationHandler?()
+    }
+
+    @IBAction func radar(_ sender: Any) {
+        radarhandler?()
     }
 }
 
