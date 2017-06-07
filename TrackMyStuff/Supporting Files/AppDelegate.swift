@@ -14,7 +14,8 @@ class AppDelegate: UIResponder {
         assemblerInstance.apply(assemblies: [
                 MainAssembly(),
                 ItemsAssembly(),
-                AddItemAssembly()
+                AddItemAssembly(),
+                MapAssembly()
         ])
         return assemblerInstance
     }()

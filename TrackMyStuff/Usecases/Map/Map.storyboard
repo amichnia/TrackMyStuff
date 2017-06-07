@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Base View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="piF-4L-PW6">
             <objects>
-                <viewController id="WdF-Fn-PL0" customClass="BaseViewController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WdF-Fn-PL0" customClass="MapViewController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hce-Xd-lmH"/>
                         <viewControllerLayoutGuide type="bottom" id="d53-Ad-i9f"/>
@@ -20,8 +20,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MxJ-kc-vUJ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxJ-kc-vUJ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <connections>
+                                    <outlet property="delegate" destination="WdF-Fn-PL0" id="bon-Uc-jX4"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,10 +35,31 @@
                             <constraint firstItem="MxJ-kc-vUJ" firstAttribute="leading" secondItem="v7d-Q8-nUx" secondAttribute="leading" id="pSQ-M8-iy4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="17V-55-3aw"/>
+                    <connections>
+                        <outlet property="mapView" destination="MxJ-kc-vUJ" id="yVt-u3-s8d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xR1-mj-zNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="116"/>
+            <point key="canvasLocation" x="150" y="116"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="eQd-Wf-UJM">
+            <objects>
+                <navigationController storyboardIdentifier="MapNavigation" id="aH7-7C-qJ8" customClass="BaseNavigationController" customModule="TrackMyStuff" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iAs-m6-lBH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WdF-Fn-PL0" kind="relationship" relationship="rootViewController" id="QcH-SH-hum"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ca9-Xf-bgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-796" y="116"/>
         </scene>
     </scenes>
 </document>
