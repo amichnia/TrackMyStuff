@@ -22,6 +22,10 @@
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>We need location only to provide you with things tracking feature.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
