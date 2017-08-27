@@ -1,21 +1,37 @@
-import UIKit
+//
+// Copyright (c) 2017 GirAppe Studio. All rights reserved.
+//
 
-@objc protocol UINibLoading {}
+import UIKit
+import Rswift
+
+@objc public protocol UINibLoading {}
 extension UIView : UINibLoading {}
 
 extension UINibLoading where Self : UIView {
-    static var defaultNibName: String {
-        return String(describing: self)
+    public static func load(from nib: UINib) -> Self {
+        guard let view = nib.instantiate(withOwner: self, options: nil).first as? Self else {
+            fatalError("Could not instantiate \(self)")
+        }
+        return view
     }
 
-    // note that this method returns an instance of type `Self`, rather than UIView
-    static func loadFromNib() -> Self {
-        return loadFromNibNamed(nibName: defaultNibName)
+    public static func loadFromNib(`in` bundle: Bundle? = nil) -> Self {
+        let bundle = bundle ?? Bundle(for: self)
+        let nibName = "\(self)".characters.split {$0 == "."}.map(String.init).last ?? String(describing: self)
+        let nib = UINib(nibName: nibName, bundle: bundle)
+        guard let view = nib.instantiate(withOwner: self, options: nil).first as? Self else {
+            fatalError("Could not instantiate \(self)")
+        }
+        return view
     }
 
-    // note that this method returns an instance of type `Self`, rather than UIView
-    static func loadFromNibNamed(nibName: String) -> Self {
-        let nib = UINib(nibName: nibName, bundle: nil)
-        return nib.instantiate(withOwner: self, options: nil).first as! Self
+    public static func loadFromNibNamed(nibName: String, `in` bundle: Bundle? = nil) -> Self {
+        let bundle = bundle ?? Bundle(for: self)
+        let nib = UINib(nibName: nibName, bundle: bundle)
+        guard let view = nib.instantiate(withOwner: self, options: nil).first as? Self else {
+            fatalError("Could not instantiate \(self)")
+        }
+        return view
     }
 }

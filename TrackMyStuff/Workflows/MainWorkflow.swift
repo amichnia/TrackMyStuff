@@ -23,7 +23,7 @@ class MainWorkflow: MainWorkflowType {
     var selectedItem = Variable<ItemType?>(nil)
 
     func start(window: UIWindow) {
-        guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() else {
+        guard let viewController = UIStoryboard(name: "Dashboard", bundle: nil).instantiateInitialViewController() else {
             assertionFailure("Cannot instantinate initial view controller!")
             return
         }

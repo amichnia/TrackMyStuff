@@ -27,14 +27,18 @@
 		8CA6C5D92E435F880430E3A4 /* FontStyle+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CAF6A0DED408F63652C8 /* FontStyle+UI.swift */; };
 		8CA6C6303C2BB7E6CED38F90 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CD50EBCB4C6A8AD183C7 /* Item.swift */; };
 		8CA6C672BABB92A743CE4272 /* AssignBeaconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C72A6E062A0BA44E363D /* AssignBeaconViewModel.swift */; };
+		8CA6C67F52AAA141426D7287 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C46008888F78527938E6 /* ItemDetailsViewController.swift */; };
 		8CA6C68F0592DB9C9E175116 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CF818A18FFE3201C97FC /* MapViewController.swift */; };
 		8CA6C6901A9C70A538B2BE75 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C47FE33D8489B5BF67FB /* BaseTabBarController.swift */; };
 		8CA6C6920972FD62A9AFECFC /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CC3D01F3070F02026E92 /* ItemCell.swift */; };
 		8CA6C6AF62DEE49752913776 /* AddItemWorkflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C2958EC57F483181FACE /* AddItemWorkflow.swift */; };
+		8CA6C7244764C95435CB84C9 /* DashboardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C6D137D65065B5642312 /* DashboardAssembly.swift */; };
+		8CA6C7258DF34AE58051DC9A /* ItemDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CD65B063E248685E337E /* ItemDetailsViewModel.swift */; };
 		8CA6C785E2597FE17C941C32 /* ItemsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CE5749DFA16AC40BE693 /* ItemsHeaderCell.swift */; };
 		8CA6C7D58F86CDEAB0CE4F3A /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CD7754340517ED5D8EB1 /* UIColor+Palette.swift */; };
 		8CA6C7F033F90D9C8E24CB92 /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CC953DA2755AC0C75DAF /* Array+Safe.swift */; };
 		8CA6C8264057E6A506C41E41 /* BeaconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C7057E49819670C5B998 /* BeaconViewModel.swift */; };
+		8CA6C8376D1E4CFB8453C1AF /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C4D7BABC47B2E983C4F8 /* DashboardViewModel.swift */; };
 		8CA6C84E0367BD7900519508 /* ItemIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C02D2FBED7B2D8C95406 /* ItemIcon.swift */; };
 		8CA6C8A1F53D4F9907E31FA2 /* ButtonTheme+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C4E51F7D8E6C7E7A1F92 /* ButtonTheme+UI.swift */; };
 		8CA6C94A7A7AE572C8DA3A26 /* RxUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C8D39C4246F64ADE0D11 /* RxUtils.swift */; };
@@ -43,6 +47,8 @@
 		8CA6CC57F9BF61C975923187 /* AddItemAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CBAA28B3C8DBA3486B51 /* AddItemAssembly.swift */; };
 		8CA6CC8201AE8E8920184F6E /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C2072ED89FA78CE6FD31 /* TabBarViewModel.swift */; };
 		8CA6CD37DEECBF850B13A303 /* ItemsWorkflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CFF2198C96C8587532F3 /* ItemsWorkflow.swift */; };
+		8CA6CDFB555F543A60EEB691 /* UIStackView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C7540D49247C8302BF75 /* UIStackView+Utils.swift */; };
+		8CA6CE870D3E42AD6B5A1950 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CB63FA2CE581210410CA /* DashboardViewController.swift */; };
 		8CA6CEA35387CEA27EB60CCF /* UI+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C2CEB8814C052F70B09B /* UI+Rx.swift */; };
 		8CA6CEA914B1868629C2B89C /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6C96663BECD2EB51037A0 /* Car.swift */; };
 		8CA6CEF7FFE5120E184A2E1B /* PassthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6CBC52670BE6923A2D089 /* PassthroughView.swift */; };
@@ -56,6 +62,16 @@
 		CC1133981EE16098007784F4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1133951EE16098007784F4 /* BaseViewController.swift */; };
 		CC11339B1EE18B55007784F4 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC11339A1EE18B55007784F4 /* SnapKit.framework */; };
 		CC1133A01EE43611007784F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1133A21EE43611007784F4 /* Localizable.strings */; };
+		CC1743AD1F52E73900013EDE /* PagesControllerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1743AB1F52E73900013EDE /* PagesControllerContainerView.swift */; };
+		CC1743AE1F52E73900013EDE /* ResizablePagesControllerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1743AC1F52E73900013EDE /* ResizablePagesControllerContainerView.swift */; };
+		CC1743B01F52E77200013EDE /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1743AF1F52E77200013EDE /* PageView.swift */; };
+		CC1743B21F52F01C00013EDE /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1743B11F52F01C00013EDE /* Dashboard.storyboard */; };
+		CC1743B61F52F16B00013EDE /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1743B41F52F16B00013EDE /* Gradient.swift */; };
+		CC1743B71F52F16B00013EDE /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1743B51F52F16B00013EDE /* GradientView.swift */; };
+		CC1743BD1F53256800013EDE /* TabSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1743B91F53256800013EDE /* TabSelectionView.swift */; };
+		CC1743BE1F53256800013EDE /* TabSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1743BA1F53256800013EDE /* TabSelectionView.xib */; };
+		CC1743BF1F53256800013EDE /* TabTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1743BB1F53256800013EDE /* TabTileView.swift */; };
+		CC1743C01F53256800013EDE /* TabTileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1743BC1F53256800013EDE /* TabTileView.xib */; };
 		CC9873421EE00D7600A8CC5D /* Items.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9873411EE00D7600A8CC5D /* Items.storyboard */; };
 		CC9873461EE04B7300A8CC5D /* AnyWorkflowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9873431EE04B7300A8CC5D /* AnyWorkflowType.swift */; };
 		CC9873471EE04B7300A8CC5D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9873441EE04B7300A8CC5D /* Common.swift */; };
@@ -92,14 +108,18 @@
 		8CA6C39F285608B822848420 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		8CA6C3A6A4423FAF908D18DE /* PagedCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedCollectionView.swift; sourceTree = "<group>"; };
 		8CA6C3BC0B83C670B9EC1D63 /* TrackMyStuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackMyStuff.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CA6C46008888F78527938E6 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
 		8CA6C47FE33D8489B5BF67FB /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		8CA6C4B1646E5D54BAF3D494 /* AddItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewModel.swift; sourceTree = "<group>"; };
+		8CA6C4D7BABC47B2E983C4F8 /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		8CA6C4E51F7D8E6C7E7A1F92 /* ButtonTheme+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonTheme+UI.swift"; sourceTree = "<group>"; };
 		8CA6C63BFF429C57BF7B7449 /* Bike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bike.swift; sourceTree = "<group>"; };
 		8CA6C68615E456FC561F942A /* RUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RUtils.swift; sourceTree = "<group>"; };
 		8CA6C6B5BF2C6A3840B792C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8CA6C6D137D65065B5642312 /* DashboardAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardAssembly.swift; sourceTree = "<group>"; };
 		8CA6C7057E49819670C5B998 /* BeaconViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconViewModel.swift; sourceTree = "<group>"; };
 		8CA6C72A6E062A0BA44E363D /* AssignBeaconViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignBeaconViewModel.swift; sourceTree = "<group>"; };
+		8CA6C7540D49247C8302BF75 /* UIStackView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Utils.swift"; sourceTree = "<group>"; };
 		8CA6C8D39C4246F64ADE0D11 /* RxUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxUtils.swift; sourceTree = "<group>"; };
 		8CA6C96663BECD2EB51037A0 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		8CA6C98A27219A3B91A8372C /* AssignBeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignBeaconViewController.swift; sourceTree = "<group>"; };
@@ -107,11 +127,13 @@
 		8CA6C9C964460684CA6AA37C /* Optional+ToArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+ToArray.swift"; sourceTree = "<group>"; };
 		8CA6CABE564F0BEBFC728734 /* MapAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAssembly.swift; sourceTree = "<group>"; };
 		8CA6CAF6A0DED408F63652C8 /* FontStyle+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FontStyle+UI.swift"; sourceTree = "<group>"; };
+		8CA6CB63FA2CE581210410CA /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		8CA6CBAA28B3C8DBA3486B51 /* AddItemAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemAssembly.swift; sourceTree = "<group>"; };
 		8CA6CBC52670BE6923A2D089 /* PassthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassthroughView.swift; sourceTree = "<group>"; };
 		8CA6CC3D01F3070F02026E92 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		8CA6CC953DA2755AC0C75DAF /* Array+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
 		8CA6CD50EBCB4C6A8AD183C7 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8CA6CD65B063E248685E337E /* ItemDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewModel.swift; sourceTree = "<group>"; };
 		8CA6CD7754340517ED5D8EB1 /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
 		8CA6CDDD2FEE1B48AE086695 /* ItemsAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsAssembly.swift; sourceTree = "<group>"; };
 		8CA6CDF6397D751A7138DF3D /* Icon+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Icon+UI.swift"; sourceTree = "<group>"; };
@@ -129,6 +151,16 @@
 		CC1133951EE16098007784F4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CC11339A1EE18B55007784F4 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		CC1133A11EE43611007784F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CC1743AB1F52E73900013EDE /* PagesControllerContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagesControllerContainerView.swift; sourceTree = "<group>"; };
+		CC1743AC1F52E73900013EDE /* ResizablePagesControllerContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizablePagesControllerContainerView.swift; sourceTree = "<group>"; };
+		CC1743AF1F52E77200013EDE /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		CC1743B11F52F01C00013EDE /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		CC1743B41F52F16B00013EDE /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		CC1743B51F52F16B00013EDE /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		CC1743B91F53256800013EDE /* TabSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabSelectionView.swift; sourceTree = "<group>"; };
+		CC1743BA1F53256800013EDE /* TabSelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabSelectionView.xib; sourceTree = "<group>"; };
+		CC1743BB1F53256800013EDE /* TabTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabTileView.swift; sourceTree = "<group>"; };
+		CC1743BC1F53256800013EDE /* TabTileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabTileView.xib; sourceTree = "<group>"; };
 		CC9873411EE00D7600A8CC5D /* Items.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Items.storyboard; path = "../Adding Item/Items.storyboard"; sourceTree = "<group>"; };
 		CC9873431EE04B7300A8CC5D /* AnyWorkflowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyWorkflowType.swift; sourceTree = "<group>"; };
 		CC9873441EE04B7300A8CC5D /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -195,6 +227,8 @@
 				8CA6C0881C3190EB03B59E3F /* ItemsViewController.swift */,
 				8CA6C1B910D74A35787128D7 /* ItemsViewModel.swift */,
 				8CA6CEA56C1AE0139F0A723A /* SectionViewModel.swift */,
+				8CA6C46008888F78527938E6 /* ItemDetailsViewController.swift */,
+				8CA6CD65B063E248685E337E /* ItemDetailsViewModel.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -277,6 +311,7 @@
 				CCAB3C411EDEE65300919497 /* R.generated.swift */,
 				8CA6C8D39C4246F64ADE0D11 /* RxUtils.swift */,
 				8CA6C68615E456FC561F942A /* RUtils.swift */,
+				8CA6C7540D49247C8302BF75 /* UIStackView+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -298,6 +333,9 @@
 		8CA6CD5EF6737021EE24ACBE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CC1743AA1F52E73900013EDE /* PageViewControllerContainerView */,
+				CC1743B31F52F16B00013EDE /* GradientView */,
+				CC1743B81F53256800013EDE /* TabSelectionView */,
 				CC9873491EE04B8000A8CC5D /* UIWindow+ReplaceAnimated.swift */,
 				8CA6C3A6A4423FAF908D18DE /* PagedCollectionView.swift */,
 				8CA6C2CEB8814C052F70B09B /* UI+Rx.swift */,
@@ -327,6 +365,7 @@
 				8CA6CDDD2FEE1B48AE086695 /* ItemsAssembly.swift */,
 				8CA6CBAA28B3C8DBA3486B51 /* AddItemAssembly.swift */,
 				8CA6CABE564F0BEBFC728734 /* MapAssembly.swift */,
+				8CA6C6D137D65065B5642312 /* DashboardAssembly.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -343,6 +382,46 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		CC1743A91F52E65200013EDE /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				CC1743B11F52F01C00013EDE /* Dashboard.storyboard */,
+				8CA6CB63FA2CE581210410CA /* DashboardViewController.swift */,
+				8CA6C4D7BABC47B2E983C4F8 /* DashboardViewModel.swift */,
+			);
+			name = Dashboard;
+			sourceTree = "<group>";
+		};
+		CC1743AA1F52E73900013EDE /* PageViewControllerContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				CC1743AF1F52E77200013EDE /* PageView.swift */,
+				CC1743AB1F52E73900013EDE /* PagesControllerContainerView.swift */,
+				CC1743AC1F52E73900013EDE /* ResizablePagesControllerContainerView.swift */,
+			);
+			path = PageViewControllerContainerView;
+			sourceTree = "<group>";
+		};
+		CC1743B31F52F16B00013EDE /* GradientView */ = {
+			isa = PBXGroup;
+			children = (
+				CC1743B41F52F16B00013EDE /* Gradient.swift */,
+				CC1743B51F52F16B00013EDE /* GradientView.swift */,
+			);
+			path = GradientView;
+			sourceTree = "<group>";
+		};
+		CC1743B81F53256800013EDE /* TabSelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CC1743B91F53256800013EDE /* TabSelectionView.swift */,
+				CC1743BA1F53256800013EDE /* TabSelectionView.xib */,
+				CC1743BB1F53256800013EDE /* TabTileView.swift */,
+				CC1743BC1F53256800013EDE /* TabTileView.xib */,
+			);
+			path = TabSelectionView;
+			sourceTree = "<group>";
+		};
 		CC98734B1EE04B8C00A8CC5D /* Workflows */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +435,7 @@
 		CCC738271EDDA7F000B9AD2C /* Usecases */ = {
 			isa = PBXGroup;
 			children = (
+				CC1743A91F52E65200013EDE /* Dashboard */,
 				CC1133931EE16098007784F4 /* Navigation */,
 				8CA6C21D63CFC3A556D1F459 /* Items */,
 				8CA6C601A4505209C7379CBB /* Map */,
@@ -461,11 +541,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC1743C01F53256800013EDE /* TabTileView.xib in Resources */,
 				CC1133A01EE43611007784F4 /* Localizable.strings in Resources */,
 				CC9873421EE00D7600A8CC5D /* Items.storyboard in Resources */,
 				8CA6C99F7B64F81FAE63F8FB /* Assets.xcassets in Resources */,
+				CC1743B21F52F01C00013EDE /* Dashboard.storyboard in Resources */,
 				CCCBE0261EE590FC005D3488 /* Radar.storyboard in Resources */,
 				8CA6CF629528B45B4B8FE809 /* LaunchScreen.storyboard in Resources */,
+				CC1743BE1F53256800013EDE /* TabSelectionView.xib in Resources */,
 				8CA6C1241A8E5DACF37250C4 /* Main.storyboard in Resources */,
 				CCCBE0241EE590DD005D3488 /* Map.storyboard in Resources */,
 			);
@@ -521,6 +604,7 @@
 				CCAB3C421EDEE65300919497 /* R.generated.swift in Sources */,
 				CC98734D1EE04B8C00A8CC5D /* MainWorkflow.swift in Sources */,
 				8CA6CEA914B1868629C2B89C /* Car.swift in Sources */,
+				CC1743B61F52F16B00013EDE /* Gradient.swift in Sources */,
 				CC9873481EE04B7300A8CC5D /* SourceViewType.swift in Sources */,
 				CC1133971EE16098007784F4 /* BaseNavigationController.swift in Sources */,
 				8CA6CFA1D2BE61527C460AEF /* Optional+ToArray.swift in Sources */,
@@ -540,6 +624,8 @@
 				CC98734A1EE04B8000A8CC5D /* UIWindow+ReplaceAnimated.swift in Sources */,
 				CC1133981EE16098007784F4 /* BaseViewController.swift in Sources */,
 				8CA6CC57F9BF61C975923187 /* AddItemAssembly.swift in Sources */,
+				CC1743AE1F52E73900013EDE /* ResizablePagesControllerContainerView.swift in Sources */,
+				CC1743B71F52F16B00013EDE /* GradientView.swift in Sources */,
 				8CA6C6901A9C70A538B2BE75 /* BaseTabBarController.swift in Sources */,
 				8CA6C6AF62DEE49752913776 /* AddItemWorkflow.swift in Sources */,
 				8CA6C58400498DA3CEAEE037 /* KeyboardView.swift in Sources */,
@@ -553,9 +639,13 @@
 				8CA6C084EB81F2D3F858022B /* Icon+UI.swift in Sources */,
 				8CA6C5268A49C6418448ADE4 /* BasicViewTheme.swift in Sources */,
 				CCCBE02C1EE5D715005D3488 /* ItemsStorage.swift in Sources */,
+				CC1743BF1F53256800013EDE /* TabTileView.swift in Sources */,
+				CC1743AD1F52E73900013EDE /* PagesControllerContainerView.swift in Sources */,
 				CCCBE02A1EE5CFF7005D3488 /* FloatingPoint+Formattable.swift in Sources */,
 				8CA6CF6F9EA97C5B5B17EF2B /* Int+Convenience.swift in Sources */,
+				CC1743B01F52E77200013EDE /* PageView.swift in Sources */,
 				CCCBE0281EE5C6E2005D3488 /* UIView+UINibLoading.swift in Sources */,
+				CC1743BD1F53256800013EDE /* TabSelectionView.swift in Sources */,
 				8CA6C4C41963948E9B8A40D4 /* ItemsViewController.swift in Sources */,
 				8CA6C6920972FD62A9AFECFC /* ItemCell.swift in Sources */,
 				8CA6C48AB19C5C2BC6990C75 /* ItemsViewModel.swift in Sources */,
@@ -569,6 +659,12 @@
 				8CA6C68F0592DB9C9E175116 /* MapViewController.swift in Sources */,
 				8CA6C0C2CD24DF894451FD89 /* MapViewModel.swift in Sources */,
 				8CA6C1AA4F5CAEF62B2D1F54 /* MapAssembly.swift in Sources */,
+				8CA6CE870D3E42AD6B5A1950 /* DashboardViewController.swift in Sources */,
+				8CA6C8376D1E4CFB8453C1AF /* DashboardViewModel.swift in Sources */,
+				8CA6C67F52AAA141426D7287 /* ItemDetailsViewController.swift in Sources */,
+				8CA6C7258DF34AE58051DC9A /* ItemDetailsViewModel.swift in Sources */,
+				8CA6C7244764C95435CB84C9 /* DashboardAssembly.swift in Sources */,
+				8CA6CDFB555F543A60EEB691 /* UIStackView+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

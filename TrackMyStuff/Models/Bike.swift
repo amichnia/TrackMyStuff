@@ -6,7 +6,7 @@ import UIKit
 import BTracker
 import RxSwift
 
-struct BikeMotion: Trackable {
+class BikeMotion: Trackable {
     let identifier: Identifier
     var trackedBy: TrackType { return .movement(type: .cycling) }
 
