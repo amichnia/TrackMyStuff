@@ -12,6 +12,7 @@ class AppDelegate: UIResponder {
     var assembler: Assembler = {
         let assemblerInstance = Assembler()
         assemblerInstance.apply(assemblies: [
+            MainAssembly(),
             DashboardAssembly()
         ])
         return assemblerInstance

@@ -3,43 +3,57 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 import SnapKit
-
-struct DashboardDetailsPage {
-    var title: String
-    var controller: UIViewController
-//    var accent: UIColor
-}
+import Swinject
 
 class DashboardViewController: UIViewController {
     @IBOutlet weak var pageContainer: PagesControllerContainerView!
     @IBOutlet weak var itemsSelectionContainer: UIView!
 
+    let bag = DisposeBag()
+    var resolver: Resolver!
     var viewModel: DashboardViewModelType!
 
     lazy var tabsSelection: TabSelectionView = {
         return TabSelectionView.load(from: R.nib.tabSelectionView()).insert(into: self.itemsSelectionContainer)
     }()
 
-    private func setup(with pages: [DashboardDetailsPage]) {
-        let controllers = pages.map { $0.controller }
+    // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        localize()
+        setupObservers()
+    }
+
+    // MARK: - Configuration
+    private func localize() {
+
+    }
+
+    private func setupObservers() {
+        viewModel.items.drive(onNext: { [weak self] pages in
+            self?.setup(with: pages)
+        }) >>> bag
+    }
+
+    private func setup(with pages: [ItemDetailsViewModelType]) {
+        let controllers = pages.map { model -> ItemDetailsViewController in
+            return resolver.resolve(ItemDetailsViewController.self, argument: model)!
+        }
+        let titles = pages.map { $0.title }
+
         pageContainer.setup(with: controllers)
         self.addChildViewController(pageContainer.pageController)
         pageContainer.pageController.didMove(toParentViewController: self)
 
-//        tabsSelection.
-//
-//        let pages = self.pages.map { $0.page }
-//        bottomMenu.clear()
-//
-//        pages.enumerated().forEach { (index: Int, page: SecondLoginPage) in
-//            let button = self.button(for: page)
-//            bottomMenu.add(button)
-//
-//            button.rx.tap.asDriver().drive(onNext: { [weak self] in
-//                self?.container.move(to: index)
-//            }) >>> bag
-//        }
+        tabsSelection.setItems(titles: titles, selected: 0)
+
+        tabsSelection.rx.itemSelected.asDriver().drive(onNext: { [weak self] item in
+            self?.pageContainer.move(to: item)
+        }) >>> bag
     }
 }
 

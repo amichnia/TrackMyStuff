@@ -7,9 +7,13 @@ import RxSwift
 import RxCocoa
 
 protocol ItemDetailsViewModelType: class {
-
+    var title: String { get }
 }
 
 class ItemDetailsViewModel: ItemDetailsViewModelType {
+    private(set) var title: String = "aaa"
 
+    init(title: String) {
+        self.title = title
+    }
 }

@@ -14,22 +14,22 @@ class DashboardAssembly: Assembly {
     }
 
     func assembleDashboard(in container: Container) {
-        container.register(DashboardViewModelType.self) { _ in
-            return DashboardViewModel()
+        container.register(DashboardViewModelType.self) { resolver in
+            let workflow = resolver.resolve(MainWorkflowType.self)!
+            return DashboardViewModel(workflow: workflow)
         }
 
         container.storyboardInitCompleted(DashboardViewController.self) { (resolver, controller: DashboardViewController) in
+            controller.resolver = resolver
             controller.viewModel = resolver.resolve(DashboardViewModelType.self)
         }
     }
 
     func assembleItemDetails(in container: Container) {
-        container.register(ItemDetailsViewModelType.self) { _ in
-            return ItemDetailsViewModel()
-        }
-
-        container.storyboardInitCompleted(ItemDetailsViewController.self) { (resolver, controller: ItemDetailsViewController) in
-            controller.viewModel = resolver.resolve(ItemDetailsViewModelType.self)
+        container.register(ItemDetailsViewController.self) { (resolver: Resolver, model: ItemDetailsViewModelType) in
+            let view = R.storyboard.dashboard.itemDetailsViewController()!
+            view.viewModel = model
+            return view
         }
     }
 }

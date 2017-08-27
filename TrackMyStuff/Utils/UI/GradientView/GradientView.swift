@@ -11,7 +11,7 @@ import UIKit
 public struct Gradients {
     public static var dashboard: Gradient {
         let start = UIColor.clear
-        let end = UIColor.black.withAlphaComponent(0.97)
+        let end = UIColor(netHex: 0x4A4A4A)
         return Gradient(style: .vertical, startColor: start, endColor: end)
     }
 }

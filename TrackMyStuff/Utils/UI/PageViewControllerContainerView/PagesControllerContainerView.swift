@@ -30,15 +30,17 @@ public class PagesControllerContainerView: UIView {
         return scrollSubject.asObservable()
     }
 
-    public func setup(with pages: [PageView]) {
+    public func setup(with pages: [PageView], initial: PageView? = nil) {
         let pages = pages.flatMap { $0 as? UIViewController }
         self.pages = pages
         self.subviews.forEach { $0.removeFromSuperview() }
 
         setupPageController()
 
-        guard let initialPage = pages.first else { return }
-        currentIndex = 0
+        guard let initialPage = (initial as? UIViewController) ?? pages.first else { return }
+        guard let currentIndex = pages.index(where: { $0 === initialPage }) else { return }
+
+        self.currentIndex = currentIndex
         pageController.setViewControllers([initialPage], direction: .forward, animated: false, completion: nil)
 
         setupObservers()
@@ -50,7 +52,7 @@ public class PagesControllerContainerView: UIView {
         guard page != currentIndex else { return }
 
         let forward = page > currentIndex
-        
+
         pendingIndex = page
         let controller = pages[page]
 
@@ -88,10 +90,10 @@ public class PagesControllerContainerView: UIView {
 
     func bind<T>(interaction trigger: Observable<T>) {
         trigger.map { [weak self] _ -> PageScrollProgress? in
-            self?.resolvedScroll()
-        }
-        .unwrap()
-        .bind(to: scrollSubject) >>> bag
+                    self?.resolvedScroll()
+                }
+                .unwrap()
+                .bind(to: scrollSubject) >>> bag
     }
 
     func visibility(of view: UIView) -> CGFloat {
@@ -118,14 +120,14 @@ public class PagesControllerContainerView: UIView {
 
 extension PagesControllerContainerView: UIPageViewControllerDelegate {
     public func pageViewController(_ pageViewController: UIPageViewController,
-                                   willTransitionTo pendingViewControllers: [UIViewController]) {
+            willTransitionTo pendingViewControllers: [UIViewController]) {
         pendingIndex = pages.index(of: pendingViewControllers.first!)
     }
 
     public func pageViewController(_ pageViewController: UIPageViewController,
-                                   didFinishAnimating finished: Bool,
-                                   previousViewControllers: [UIViewController],
-                                   transitionCompleted completed: Bool) {
+            didFinishAnimating finished: Bool,
+            previousViewControllers: [UIViewController],
+            transitionCompleted completed: Bool) {
         guard completed else { return }
 
         currentIndex = pendingIndex
@@ -136,7 +138,7 @@ extension PagesControllerContainerView: UIPageViewControllerDelegate {
 
 extension PagesControllerContainerView: UIPageViewControllerDataSource {
     public func pageViewController(_ pageViewController: UIPageViewController,
-                                   viewControllerBefore viewController: UIViewController) -> UIViewController? {
+            viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let index = pages.index(of: viewController) else { return nil }
         guard index > 0 else { return nil }
 
@@ -144,10 +146,10 @@ extension PagesControllerContainerView: UIPageViewControllerDataSource {
     }
 
     public func pageViewController(_ pageViewController: UIPageViewController,
-                                   viewControllerAfter viewController: UIViewController) -> UIViewController? {
+            viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let index = pages.index(of: viewController) else { return nil }
         guard index < pages.count - 1 else { return nil }
-        
+
         return pages[index + 1]
     }
 }
